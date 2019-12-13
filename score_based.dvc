@@ -1,4 +1,4 @@
-md5: e6ef62caf13dd3a17c0fab4b91d65c66
+md5: 4d744c16dd057efb3e254ae3f9201743
 cmd: Rscript code/score_based_algo.R
 deps:
 - md5: c7763d313e62958195b387a6347f1e1a
@@ -16,7 +16,7 @@ deps:
 - md5: 9802136550067a18626433857588d713
   path: data/networks_and_trajectories_var10.RData
 outs:
-- md5: a913a64d9663165a746817f63115a93c
+- md5: fada9aab187f6f11585116809400f524
   path: metrics/score_based.json
   cache: false
   metric: true
