@@ -1,0 +1,23 @@
+md5: e6ef62caf13dd3a17c0fab4b91d65c66
+cmd: Rscript code/score_based_algo.R
+deps:
+- md5: c7763d313e62958195b387a6347f1e1a
+  path: code/score_based_algo.R
+- md5: c07d006895e0e4f8858b68986029d328
+  path: code/experiment_utils.R
+- md5: f2439f1af3d6c3752fbd27f88becea4a
+  path: data/networks_and_trajectories_var3.RData
+- md5: b1c59d8ac6f74bdbb253a0d85af7e6c9
+  path: data/networks_and_trajectories_var4.RData
+- md5: 00a925915a072bf11fb703e63e97de28
+  path: data/networks_and_trajectories_var5.RData
+- md5: 819b2938e7ee91559b6fb4eeb058a749
+  path: data/networks_and_trajectories_var6.RData
+- md5: 9802136550067a18626433857588d713
+  path: data/networks_and_trajectories_var10.RData
+outs:
+- md5: a913a64d9663165a746817f63115a93c
+  path: metrics/score_based.json
+  cache: false
+  metric: true
+  persist: false
