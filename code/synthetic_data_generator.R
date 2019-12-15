@@ -169,13 +169,54 @@ vars20_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D",
 		   time_end=100,
 		   nsample=1000)
 
+vars50_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E",
+					    "F","G","H","I","J","K","L","M","N","O",
+					    "AX","AY","AZ","AQ","AV","AA","AB","AC","AD","AE",
+					    "AF","AG","AH","AI","AJ","AK","AL","AM","AN","AO",
+					    "BX","BY","BZ","BQ","BV","BA","BB","BC","BD","BE"),
+				   "Value"=c(2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
+ 		   n_iter=1,
+		   edge_prob=0.2,
+		   time_end=100,
+		   nsample=1000)
+
+vars100_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E",
+					    "F","G","H","I","J","K","L","M","N","O",
+					    "AX","AY","AZ","AQ","AV","AA","AB","AC","AD","AE",
+					    "AF","AG","AH","AI","AJ","AK","AL","AM","AN","AO",
+					    "BX","BY","BZ","BQ","BV","BA","BB","BC","BD","BE",
+					    "CX","CY","CZ","CQ","CV","CA","CB","CC","CD","CE",
+					    "CF","CG","CH","CI","CJ","CK","CL","CM","CN","CO",
+					    "CAX","CAY","CAZ","CAQ","CAV","CAA","CAB","CAC","CAD","CAE",
+					    "CAF","CAG","CAH","CAI","CAJ","CAK","CAL","CAM","CAN","CAO",
+					    "CBX","CBY","CBZ","CBQ","CBV","CBA","CBB","CBC","CBD","CBE"),
+				   "Value"=c(2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2,
+					     2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
+ 		   n_iter=1,
+		   edge_prob=0.2,
+		   time_end=100,
+		   nsample=1000)
+
 iter_list = list(vars3_data,
 		 vars4_data,
 		 vars5_data,
 		 vars6_data,
 		 vars10_data,
 		 vars15_data,
-		 vars20_data)
+		 vars20_data
+		 )
 
 mclapply(iter_list, generate_and_save, mc.cores=8)
 
