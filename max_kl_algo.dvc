@@ -1,24 +1,28 @@
-md5: 91bdaf703262ebc3a699c051bc967089
+md5: 370f7d97d5e387f8a57c2ca2412f3024
 cmd: Rscript code/max_kl_algo.R
 deps:
-- md5: 418320fe4f19550ce5e1b464c6759b8d
+- md5: 17f74b7d11cf019cbdfa203c83f39206
   path: code/max_kl_algo.R
 - md5: c07d006895e0e4f8858b68986029d328
   path: code/experiment_utils.R
 - md5: 9c02906b37c7207700a72028fd56c2c1
   path: code/utils_algo.R
-- md5: f2439f1af3d6c3752fbd27f88becea4a
+- md5: fbf2d9d9ca0f01a62c4ed1b946362242
   path: data/networks_and_trajectories_var3.RData
-- md5: b1c59d8ac6f74bdbb253a0d85af7e6c9
+- md5: a4945d6889a7acee846c3045e2ee058d
   path: data/networks_and_trajectories_var4.RData
-- md5: 00a925915a072bf11fb703e63e97de28
+- md5: 93ecb04fafc9fdf4d2303c994869afd8
   path: data/networks_and_trajectories_var5.RData
-- md5: 819b2938e7ee91559b6fb4eeb058a749
+- md5: 774efba757547b448aaa83c913f33490
   path: data/networks_and_trajectories_var6.RData
-- md5: 9802136550067a18626433857588d713
+- md5: d626d2e2be411acc93bb32c04d313635
   path: data/networks_and_trajectories_var10.RData
+- md5: 144637b676746725af2b36d493e7e68d
+  path: data/networks_and_trajectories_var15.RData
+- md5: f0e833332c4b3e0cf4b10a29c7d476d5
+  path: data/networks_and_trajectories_var20.RData
 outs:
-- md5: 76e9085a4e09717eb71454072c7c7f2f
+- md5: 47239afa1dcd78909fe36a5fa7c79159
   path: metrics/max_kl_based.json
   cache: false
   metric: true

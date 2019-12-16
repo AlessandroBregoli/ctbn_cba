@@ -51,7 +51,7 @@ ck_dependency_max_kl <- function(trjs,variables, to,from,sep_set,kx){
   
   
 }
-max_kl_pc_algo <- function(trjs,variables,kx=0.6){
+max_kl_pc_algo <- function(trjs,variables,kx_list=0.6){
   vars = variables$Name
   net_struct = expand.grid(rep(list(vars),2),stringsAsFactors=FALSE)
   colnames(net_struct) = c("From", "To")
@@ -76,7 +76,10 @@ max_kl_pc_algo <- function(trjs,variables,kx=0.6){
         }
         #print(paste(from_variables," from:",from," n:",n))
         sep_set_comb = t(combn(setdiff(from_variables,c(from)),n))
-        
+        if(length(from_variables) > 2)
+		kx = kx_list[[2]]
+	else
+		kx = kx_list[[1]]
         for(index_set in 1:nrow(sep_set_comb)){
           if(length(sep_set_comb[index_set,]) == 0)
             sep_set = c()
@@ -102,5 +105,5 @@ for(i in list(3,4,5,6,10)){
 }
 
 
-algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based",0.6)
+algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based",list(0.55,0.6))
 
