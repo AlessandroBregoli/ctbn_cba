@@ -1,28 +1,28 @@
-md5: 4011508a1a0ab08cb4847807693bb3ec
+md5: 8e2935936ca29726324508e713354ff4
 cmd: Rscript code/max_kl_pc_algo.R
 deps:
-- md5: 1ac0e958dbebd0821feb656c72e7b18b
+- md5: 567c19f590c1bfbadc0482ac2ff3f3aa
   path: code/max_kl_pc_algo.R
 - md5: c07d006895e0e4f8858b68986029d328
   path: code/experiment_utils.R
 - md5: 9c02906b37c7207700a72028fd56c2c1
   path: code/utils_algo.R
-- md5: fbf2d9d9ca0f01a62c4ed1b946362242
+- md5: 1e9357a3ad15ef9934e4704abb7d3fa2
   path: data/networks_and_trajectories_var3.RData
-- md5: a4945d6889a7acee846c3045e2ee058d
+- md5: b5a4d7f5ff782cf9b6b3884e5151aa32
   path: data/networks_and_trajectories_var4.RData
-- md5: 93ecb04fafc9fdf4d2303c994869afd8
+- md5: 30846b5beaacfb807332cea34a6fb006
   path: data/networks_and_trajectories_var5.RData
-- md5: 774efba757547b448aaa83c913f33490
+- md5: 7928b4835169d2a29e613f4b6642ef96
   path: data/networks_and_trajectories_var6.RData
-- md5: d626d2e2be411acc93bb32c04d313635
+- md5: c2b1fa20836b080b58a62c1eeefae9b7
   path: data/networks_and_trajectories_var10.RData
-- md5: 144637b676746725af2b36d493e7e68d
+- md5: 3cf04832aa67f834eb3bea3948e9fb51
   path: data/networks_and_trajectories_var15.RData
-- md5: f0e833332c4b3e0cf4b10a29c7d476d5
+- md5: 0e36e1d81a828993fa489c0f02ab61fa
   path: data/networks_and_trajectories_var20.RData
 outs:
-- md5: 0ca32809fe49be8a815a53260a8d0cf2
+- md5: 52928a27bbaabf0bd71834b0da2b4e32
   path: metrics/max_kl_pc_based.json
   cache: false
   metric: true

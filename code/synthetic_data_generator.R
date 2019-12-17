@@ -154,18 +154,18 @@ vars6_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A"),"Value"=c(2,
 
 vars10_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E"),"Value"=c(2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
 		   n_iter=3,
-		   edge_prob=0.2,
+		   edge_prob=0.3,
 		   time_end=100,
 		   nsample=1000)
 
 vars15_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E","F","G","H","I","J"),"Value"=c(2,3,5,2,2,2,3,3,2,2,3,3,2,2,4),stringsAsFactors = FALSE),
 		   n_iter=3,
-		   edge_prob=0.2,
+		   edge_prob=0.3,
 		   time_end=100,
 		   nsample=1000)
 vars20_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"),"Value"=c(2,3,5,2,2,2,3,3,2,2,2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
  		   n_iter=3,
-		   edge_prob=0.2,
+		   edge_prob=0.3,
 		   time_end=100,
 		   nsample=1000)
 

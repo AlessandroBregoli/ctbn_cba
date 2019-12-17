@@ -100,7 +100,7 @@ max_kl_pc_algo <- function(trjs,variables,kx_list=0.6){
 }
 
 datasets_path =c()
-for(i in list(3,4,5,6,10)){
+for(i in list(3,4,5,6,10,15)){
 	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_var",i,".RData",sep=""))
 }
 

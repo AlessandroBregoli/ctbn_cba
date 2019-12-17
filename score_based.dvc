@@ -1,26 +1,26 @@
-md5: ba3f037c030a2c614aa7af52d27ff3ed
+md5: 2f28022e53393d4462863727169c000e
 cmd: Rscript code/score_based_algo.R
 deps:
 - md5: d08b232e1625c942c28e67ccf3483cd3
   path: code/score_based_algo.R
 - md5: c07d006895e0e4f8858b68986029d328
   path: code/experiment_utils.R
-- md5: fbf2d9d9ca0f01a62c4ed1b946362242
+- md5: 1e9357a3ad15ef9934e4704abb7d3fa2
   path: data/networks_and_trajectories_var3.RData
-- md5: a4945d6889a7acee846c3045e2ee058d
+- md5: b5a4d7f5ff782cf9b6b3884e5151aa32
   path: data/networks_and_trajectories_var4.RData
-- md5: 93ecb04fafc9fdf4d2303c994869afd8
+- md5: 30846b5beaacfb807332cea34a6fb006
   path: data/networks_and_trajectories_var5.RData
-- md5: 774efba757547b448aaa83c913f33490
+- md5: 7928b4835169d2a29e613f4b6642ef96
   path: data/networks_and_trajectories_var6.RData
-- md5: d626d2e2be411acc93bb32c04d313635
+- md5: c2b1fa20836b080b58a62c1eeefae9b7
   path: data/networks_and_trajectories_var10.RData
-- md5: 144637b676746725af2b36d493e7e68d
+- md5: 3cf04832aa67f834eb3bea3948e9fb51
   path: data/networks_and_trajectories_var15.RData
-- md5: f0e833332c4b3e0cf4b10a29c7d476d5
+- md5: 0e36e1d81a828993fa489c0f02ab61fa
   path: data/networks_and_trajectories_var20.RData
 outs:
-- md5: 3f513e79eecf2c6fc78b4c1c5eeaa3a9
+- md5: 9c6d0776a9de069ce31a5bfe49607d25
   path: metrics/score_based.json
   cache: false
   metric: true

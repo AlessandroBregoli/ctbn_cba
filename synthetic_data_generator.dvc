@@ -1,40 +1,40 @@
-md5: 6dc5d4f28cf0767c951b39cd981a98f4
+md5: a1b8f58e576eec4060ae85f4bc9a65cb
 cmd: Rscript code/synthetic_data_generator.R
 deps:
-- md5: ea53b58c89f6cb66a4368f44afb47793
+- md5: ba7a9b6172a977a117f6003820b2b47f
   path: code/synthetic_data_generator.R
 outs:
-- md5: fbf2d9d9ca0f01a62c4ed1b946362242
+- md5: 1e9357a3ad15ef9934e4704abb7d3fa2
   path: data/networks_and_trajectories_var3.RData
   cache: true
   metric: false
   persist: false
-- md5: a4945d6889a7acee846c3045e2ee058d
+- md5: b5a4d7f5ff782cf9b6b3884e5151aa32
   path: data/networks_and_trajectories_var4.RData
   cache: true
   metric: false
   persist: false
-- md5: 93ecb04fafc9fdf4d2303c994869afd8
+- md5: 30846b5beaacfb807332cea34a6fb006
   path: data/networks_and_trajectories_var5.RData
   cache: true
   metric: false
   persist: false
-- md5: 774efba757547b448aaa83c913f33490
+- md5: 7928b4835169d2a29e613f4b6642ef96
   path: data/networks_and_trajectories_var6.RData
   cache: true
   metric: false
   persist: false
-- md5: d626d2e2be411acc93bb32c04d313635
+- md5: c2b1fa20836b080b58a62c1eeefae9b7
   path: data/networks_and_trajectories_var10.RData
   cache: true
   metric: false
   persist: false
-- md5: 144637b676746725af2b36d493e7e68d
+- md5: 3cf04832aa67f834eb3bea3948e9fb51
   path: data/networks_and_trajectories_var15.RData
   cache: true
   metric: false
   persist: false
-- md5: f0e833332c4b3e0cf4b10a29c7d476d5
+- md5: 0e36e1d81a828993fa489c0f02ab61fa
   path: data/networks_and_trajectories_var20.RData
   cache: true
   metric: false

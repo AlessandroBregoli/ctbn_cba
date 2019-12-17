@@ -8,7 +8,7 @@ matrix_distance_test_kl <- function(m_a, m_b,alpha){
 
 max_kl_algo <- function(trjs,variables,alpha=0.01){
   vars = variables$Name
-  if(length(vars) > 6)
+  if(length(vars) > 4)
      alpha = alpha[[2]]
   else
      alpha = alpha[[1]]
@@ -68,5 +68,5 @@ for(i in list(3,4,5,6,10)){
 }
 
 
-algo_experiments(datasets_path, max_kl_algo, "max_kl_based",list(0.6,0.6))
+algo_experiments(datasets_path, max_kl_algo, "max_kl_based",list(0.6,0.85))
 
