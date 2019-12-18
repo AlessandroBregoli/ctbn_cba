@@ -1,7 +1,7 @@
-md5: 8e2935936ca29726324508e713354ff4
+md5: 7677c44d8d852317f148e2f368252fe3
 cmd: Rscript code/max_kl_pc_algo.R
 deps:
-- md5: 567c19f590c1bfbadc0482ac2ff3f3aa
+- md5: 0ea21439febd7cbbe39134964bc444d1
   path: code/max_kl_pc_algo.R
 - md5: c07d006895e0e4f8858b68986029d328
   path: code/experiment_utils.R
@@ -22,7 +22,7 @@ deps:
 - md5: 0e36e1d81a828993fa489c0f02ab61fa
   path: data/networks_and_trajectories_var20.RData
 outs:
-- md5: 52928a27bbaabf0bd71834b0da2b4e32
+- md5: 41886ab7f7afba8ab6eafbfafb5ac1a2
   path: metrics/max_kl_pc_based.json
   cache: false
   metric: true

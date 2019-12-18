@@ -76,7 +76,7 @@ max_kl_pc_algo <- function(trjs,variables,kx_list=0.6){
         }
         #print(paste(from_variables," from:",from," n:",n))
         sep_set_comb = t(combn(setdiff(from_variables,c(from)),n))
-        if(length(from_variables) > 2)
+        if(n > 4)
 		kx = kx_list[[2]]
 	else
 		kx = kx_list[[1]]
@@ -105,5 +105,5 @@ for(i in list(3,4,5,6,10,15)){
 }
 
 
-algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based",list(0.55,0.6))
+algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based",list(0.55,0.7))
 
