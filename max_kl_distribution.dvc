@@ -1,0 +1,27 @@
+md5: f42bce224f0558a10b382f74d7cdd405
+cmd: Rscript code/max_kl_distribution.R
+deps:
+- md5: f1b67fa431c1690f2fcd2eb5b92678ec
+  path: code/max_kl_distribution.R
+- md5: 9c02906b37c7207700a72028fd56c2c1
+  path: code/utils_algo.R
+- md5: 1e9357a3ad15ef9934e4704abb7d3fa2
+  path: data/networks_and_trajectories_var3.RData
+- md5: b5a4d7f5ff782cf9b6b3884e5151aa32
+  path: data/networks_and_trajectories_var4.RData
+- md5: 30846b5beaacfb807332cea34a6fb006
+  path: data/networks_and_trajectories_var5.RData
+- md5: 7928b4835169d2a29e613f4b6642ef96
+  path: data/networks_and_trajectories_var6.RData
+- md5: c2b1fa20836b080b58a62c1eeefae9b7
+  path: data/networks_and_trajectories_var10.RData
+- md5: 3cf04832aa67f834eb3bea3948e9fb51
+  path: data/networks_and_trajectories_var15.RData
+- md5: 0e36e1d81a828993fa489c0f02ab61fa
+  path: data/networks_and_trajectories_var20.RData
+outs:
+- md5: 37d811bf4ac35482d872fd033a12614e
+  path: data/Ckl_distribution.RData
+  cache: true
+  metric: false
+  persist: false
