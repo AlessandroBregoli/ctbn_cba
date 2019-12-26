@@ -32,7 +32,7 @@ algo_experiment <- function(networks, learn_function, ...){
   return(list(cf_matrix=cf_matrix, execution.time=execution.time[["elapsed"]]/length(networks)))
 }
 
-algo_experiments <- function(datasets_path, learn_function,function_name,...){
+algo_experiments <- function(datasets_path, learn_function,function_name,data_name,...){
 	results = list()
 	for(dataset_path in datasets_path){
 		dataset_name = substr(dataset_path, 6, nchar(dataset_path)-6)
@@ -40,6 +40,6 @@ algo_experiments <- function(datasets_path, learn_function,function_name,...){
 		load(dataset_path)
 		results[[dataset_name]] = algo_experiment(networks, learn_function,...)
 	}
-	write(toJSON(results),paste("metrics/",function_name,".json", sep=""))
+	write(toJSON(results),paste("metrics/",function_name,"_",data_name,".json", sep=""))
 	
 }

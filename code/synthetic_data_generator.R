@@ -1,5 +1,7 @@
+args = commandArgs(trailingOnly=TRUE)
 library(ctbn)
 library(parallel)
+source(args[1])
 
 generate_random_structure <- function(vars,p){
   variables = vars$Name
@@ -124,90 +126,11 @@ generate_and_save <- function(data){
 	edge_prob = data[["edge_prob"]]
 	time_end=data[["time_end"]]
 	nsample=data[["nsample"]]
+	name=data[["name"]]
 	networks = generate_networks_and_samples(vars, n_iter, edge_prob, time_end, nsample)
-	save(vars,networks, file=paste("data/networks_and_trajectories_var",nrow(vars),".RData",sep=""))
+	save(vars,networks, file=paste("data/networks_and_trajectories_",name,"_",nrow(vars),".RData",sep=""))
 }
 
-vars3_data = list(vars=data.frame("Name"=c("X","Y","Z"),"Value"=c(2,3,2),stringsAsFactors = FALSE),
-		  n_iter=10,
-		  edge_prob=0.3,
-		  time_end=100,
-		  nsample=1000)
-
-vars4_data = list(vars=data.frame("Name"=c("X","Y","Z","Q"),"Value"=c(2,3,2,3),stringsAsFactors = FALSE),
-		  n_iter=10,
-		  edge_prob=0.3,
-		  time_end=100,
-		  nsample=1000)
-
-vars5_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V"),"Value"=c(2,5,2,3,2),stringsAsFactors = FALSE),
-		  n_iter=10,
-		  edge_prob=0.3,
-		  time_end=100,
-		  nsample=1000)
-
-vars6_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A"),"Value"=c(2,3,5,2,2,2),stringsAsFactors = FALSE),
-		  n_iter=10,
-		  edge_prob=0.3,
-		  time_end=100,
-		  nsample=1000)
-
-vars10_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E"),"Value"=c(2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
-		   n_iter=3,
-		   edge_prob=0.3,
-		   time_end=100,
-		   nsample=1000)
-
-vars15_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E","F","G","H","I","J"),"Value"=c(2,3,5,2,2,2,3,3,2,2,3,3,2,2,4),stringsAsFactors = FALSE),
-		   n_iter=3,
-		   edge_prob=0.3,
-		   time_end=100,
-		   nsample=1000)
-vars20_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"),"Value"=c(2,3,5,2,2,2,3,3,2,2,2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
- 		   n_iter=3,
-		   edge_prob=0.3,
-		   time_end=100,
-		   nsample=1000)
-
-vars50_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E",
-					    "F","G","H","I","J","K","L","M","N","O",
-					    "AX","AY","AZ","AQ","AV","AA","AB","AC","AD","AE",
-					    "AF","AG","AH","AI","AJ","AK","AL","AM","AN","AO",
-					    "BX","BY","BZ","BQ","BV","BA","BB","BC","BD","BE"),
-				   "Value"=c(2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
- 		   n_iter=1,
-		   edge_prob=0.2,
-		   time_end=100,
-		   nsample=1000)
-
-vars100_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E",
-					    "F","G","H","I","J","K","L","M","N","O",
-					    "AX","AY","AZ","AQ","AV","AA","AB","AC","AD","AE",
-					    "AF","AG","AH","AI","AJ","AK","AL","AM","AN","AO",
-					    "BX","BY","BZ","BQ","BV","BA","BB","BC","BD","BE",
-					    "CX","CY","CZ","CQ","CV","CA","CB","CC","CD","CE",
-					    "CF","CG","CH","CI","CJ","CK","CL","CM","CN","CO",
-					    "CAX","CAY","CAZ","CAQ","CAV","CAA","CAB","CAC","CAD","CAE",
-					    "CAF","CAG","CAH","CAI","CAJ","CAK","CAL","CAM","CAN","CAO",
-					    "CBX","CBY","CBZ","CBQ","CBV","CBA","CBB","CBC","CBD","CBE"),
-				   "Value"=c(2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2,
-					     2,3,5,2,2,2,3,3,2,2),stringsAsFactors = FALSE),
- 		   n_iter=1,
-		   edge_prob=0.2,
-		   time_end=100,
-		   nsample=1000)
 
 iter_list = list(vars3_data,
 		 vars4_data,

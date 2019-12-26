@@ -100,10 +100,17 @@ max_kl_pc_algo <- function(trjs,variables,kx_list=0.6){
 }
 
 datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_var",i,".RData",sep=""))
+for(i in list(3,4,5,6,10,15,20)){
+	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_binary_data_",i,".RData",sep=""))
 }
 
+print("binary data")
+algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based","binary_data",list(0.55,0.6))
 
-algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based",list(0.55,0.7))
+datasets_path =c()
+for(i in list(3,4,5,6,10,15,20)){
+	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_ternary_data_",i,".RData",sep=""))
+}
 
+print("ternary data")
+algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based","ternary_data",list(0.55,0.6))
