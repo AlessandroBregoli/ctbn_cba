@@ -140,7 +140,7 @@ distribution_experiments <- function(datasets_path){
 }
 
 datasets_path =c()
-for(i in list(3,4,5,6)){
+for(i in list(3,4,5,6,10)){
 	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_binary_data_",i,".RData",sep=""))
 	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_ternary_data_",i,".RData",sep=""))
 }

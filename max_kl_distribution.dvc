@@ -1,7 +1,7 @@
-md5: dd1bd565360678048b7ae0fbda10ceec
+md5: 8641bbd3ac8fa64de1d62c8f240e642e
 cmd: Rscript code/max_kl_distribution.R
 deps:
-- md5: 959cfb6f64662c2ed4157c2f5a368624
+- md5: 3a10271e3f4731d0048371d16371aa68
   path: code/max_kl_distribution.R
 - md5: f724891165449e9c74d675681d9ce1d6
   path: data/networks_and_trajectories_binary_data_3.RData
@@ -32,12 +32,12 @@ deps:
 - md5: d5c1155c2dceb988b28565baa1376c33
   path: data/networks_and_trajectories_ternary_data_20.RData
 outs:
-- md5: 80f96eaf88725c158c29ba7e724f4b62
+- md5: cb12371851a5e9b6126f82c6e9a08d28
   path: data/Ckl_distribution.RData
   cache: true
   metric: false
   persist: false
-- md5: c8fbc0385cb46284ef3ebd4a22a959fd
+- md5: 92c6f32d09bd757fa42d6ba1454606aa
   path: data/Ckl_distribution.json
   cache: true
   metric: false
