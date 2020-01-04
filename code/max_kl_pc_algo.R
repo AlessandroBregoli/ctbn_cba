@@ -76,10 +76,7 @@ max_kl_pc_algo <- function(trjs,variables,kx_list=0.6){
         }
         #print(paste(from_variables," from:",from," n:",n))
         sep_set_comb = t(combn(setdiff(from_variables,c(from)),n))
-        if(n > 4)
-		kx = kx_list[[2]]
-	else
-		kx = kx_list[[1]]
+	kx = kx_list[[1]] +  kx_list[[2]]*n
         for(index_set in 1:nrow(sep_set_comb)){
           if(length(sep_set_comb[index_set,]) == 0)
             sep_set = c()
@@ -105,7 +102,7 @@ for(i in list(3,4,5,6,10,15,20)){
 }
 
 print("binary data")
-algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based","binary_data",list(0.55,0.6))
+algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based","binary_data",list(0.53,0.005))
 
 datasets_path =c()
 for(i in list(3,4,5,6,10,15,20)){
@@ -113,4 +110,4 @@ for(i in list(3,4,5,6,10,15,20)){
 }
 
 print("ternary data")
-algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based","ternary_data",list(0.55,0.6))
+algo_experiments(datasets_path, max_kl_pc_algo, "max_kl_pc_based","ternary_data",list(0.53,0.05))
