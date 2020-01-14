@@ -1,4 +1,4 @@
-n=2
+n=3
 name="ternary_data"
 vars3_data = list(vars=data.frame("Name"=c("X","Y","Z"),"Value"=rep(n,3),stringsAsFactors = FALSE),
 		  n_iter=10,
