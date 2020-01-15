@@ -1,4 +1,4 @@
-md5: 351e2627e6f5476abf279ac3a3f918eb
+md5: 8f3eb8897d1b207601e1baf14e6f41c5
 cmd: Rscript code/max_couple_kl_algo.R
 deps:
 - md5: 8326bf58a9c03e0c15d4ab1220d574ea
@@ -9,39 +9,39 @@ deps:
   path: code/utils_algo.R
 - md5: f724891165449e9c74d675681d9ce1d6
   path: data/networks_and_trajectories_binary_data_3.RData
-- md5: 12a72f9cc1c9e5d55773edcb6cf5fdd8
+- md5: 925b7e2b29b12470a63f1268193bc594
   path: data/networks_and_trajectories_ternary_data_3.RData
 - md5: a3c25366a84d538ed792ded6f376db6b
   path: data/networks_and_trajectories_binary_data_4.RData
-- md5: 16346940908595ba36aa5e94cb4e641a
+- md5: d83dd68bf5142362eb3a8e415150b785
   path: data/networks_and_trajectories_ternary_data_4.RData
 - md5: ed2186ff794c83dd41205cf44875ee97
   path: data/networks_and_trajectories_binary_data_5.RData
-- md5: 7dcdec221c6644b435761b650f049164
+- md5: 54095e6738facddb6d92599fcdded723
   path: data/networks_and_trajectories_ternary_data_5.RData
 - md5: 5792fda300857d7fb4f73679c8d7b482
   path: data/networks_and_trajectories_binary_data_6.RData
-- md5: bfc80093bd03310dc7951e5960d01fea
+- md5: 7da7638a911eb8ad2f57343ac0944b7e
   path: data/networks_and_trajectories_ternary_data_6.RData
 - md5: ec6c257e42a5e67dd87142fd93e0b294
   path: data/networks_and_trajectories_binary_data_10.RData
-- md5: a6630f4c561ff688448eabfe419447b8
+- md5: ef9e5951ad702c9c66edcb8e5dd76b4e
   path: data/networks_and_trajectories_ternary_data_10.RData
 - md5: 9ccc266e141975f34e50a2ad92bf2480
   path: data/networks_and_trajectories_binary_data_15.RData
-- md5: e14d6c08cd7f4459dc8812d97d402444
+- md5: 0d8623680b7b97404d4bdaa868a80f14
   path: data/networks_and_trajectories_ternary_data_15.RData
 - md5: 63d3e83d870206819d3b9c9c69048cd2
   path: data/networks_and_trajectories_binary_data_20.RData
-- md5: d5c1155c2dceb988b28565baa1376c33
+- md5: d3954ebbb81a4f703ce1e14176e23d13
   path: data/networks_and_trajectories_ternary_data_20.RData
 outs:
-- md5: b413aa591a95c4e4554a1f41b79e0179
+- md5: 5ddd0c1966eb0a92aa01a05ce5d23820
   path: metrics/max_couple_kl_based_binary_data.json
   cache: false
   metric: true
   persist: false
-- md5: ed1793f8ca2885662d0cbee64a31f628
+- md5: e14d8f8eb91bf68cda3562b6e8c9e4d6
   path: metrics/max_couple_kl_based_ternary_data.json
   cache: false
   metric: true
