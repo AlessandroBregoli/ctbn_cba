@@ -7,7 +7,7 @@ compute_samples_stats <- function(samples){
   for(x in 1:length(samples)){
     s = samples[[x]]
     tmp_diff = diff(as.matrix(s))
-    s[1:nrow(s)-1,"Diff"] = tmp_diff["Time"]
+    s[1:nrow(s)-1,"Diff"] = tmp_diff[,"Time"]
     tmp_diff = abs(tmp_diff )>0
     tmp_diff = data.frame(tmp_diff)
     tmp_diff$Time <- NULL
@@ -23,6 +23,8 @@ filter_trjs_by_values <- function(samples, variables,values){
 	for(x in seq(samples)){
 
 		for(var_id in seq(variables)){
+            if(nrow(filtered_samples[[x]]) == 0)
+              break
 			filtered_samples[[x]] = filtered_samples[[x]][filtered_samples[[x]][variables[[var_id]]] == values[[var_id]],]
 		}
 	}
