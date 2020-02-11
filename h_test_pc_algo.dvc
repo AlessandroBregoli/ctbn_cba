@@ -1,7 +1,7 @@
-md5: bca2ccdecb37a42b7decf1c07cec567a
+md5: 3f1212bf3f325528cc6f53a5c2b1c99c
 cmd: Rscript code/h_test_pc_algo.R
 deps:
-- md5: 4d34c42f7d6bdd150daa9dc77ea1018a
+- md5: 49ad3996ff63bc930d094f4a40f47554
   path: code/h_test_pc_algo.R
 - md5: b143c03482557408f8aad2b69f37193c
   path: code/experiment_utils.R
@@ -36,8 +36,13 @@ deps:
 - md5: d3954ebbb81a4f703ce1e14176e23d13
   path: data/networks_and_trajectories_ternary_data_20.RData
 outs:
-- md5: 0acb1602f9f39ccb0852e2e2c5751c54
+- md5: 6be9043bf735d6eceb659e0d018c6161
   path: metrics/h_test_pc_based_binary_data.json
+  cache: false
+  metric: true
+  persist: false
+- md5: 3fb484f7a4b685e5272f3e6e6ffe0add
+  path: metrics/h_test_pc_based_ternary_data.json
   cache: false
   metric: true
   persist: false

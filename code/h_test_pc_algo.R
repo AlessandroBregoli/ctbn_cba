@@ -157,10 +157,10 @@ for(i in list(3,4,5,6,10,15)){
 print("binary data")
 algo_experiments(datasets_path, h_test_pc_algo, "h_test_pc_based","binary_data",0.2)
 
-#datasets_path =c()
-#for(i in list(3,4,5,6,10,15,20)){
-#	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_ternary_data_",i,".RData",sep=""))
-#}
+datasets_path =c()
+for(i in list(3,4,5,6,10,15)){
+	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_ternary_data_",i,".RData",sep=""))
+}
 
-#print("ternary data")
-#algo_experiments(datasets_path, h_test_pc_algo, "h_test_pc_based","ternary_data",0.02)
+print("ternary data")
+algo_experiments(datasets_path, h_test_pc_algo, "h_test_pc_based","ternary_data",0.2)
