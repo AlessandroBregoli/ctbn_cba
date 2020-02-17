@@ -156,13 +156,14 @@ ks_test_uniformization_pc_algo <- function(trjs,variables,alpha=0.05){
   
 }
 
+subsamples=c(100)
 datasets_path =c()
 for(i in list(3,4,5,6,10,15)){
 	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_binary_data_",i,".RData",sep=""))
 }
 
 print("binary data")
-algo_experiments(datasets_path, ks_test_uniformization_pc_algo, "ks_test_uniformization_pc_based","binary_data",0.1)
+algo_experiments(datasets_path, ks_test_uniformization_pc_algo, "ks_test_uniformization_pc_based","binary_data",subsamples,0.1)
 
 datasets_path =c()
 for(i in list(3,4,5,6,10,15)){
@@ -170,4 +171,16 @@ for(i in list(3,4,5,6,10,15)){
 }
 
 print("ternary data")
-algo_experiments(datasets_path, ks_test_uniformization_pc_algo, "ks_test_uniformization_pc_based","ternary_data",0.01)
+algo_experiments(datasets_path, ks_test_uniformization_pc_algo, "ks_test_uniformization_pc_based","ternary_data",subsamples,0.01)
+
+
+subsamples_quat=c(500)
+datasets_path =c()
+for(i in list(3,4,5,6,10,15)){
+	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_quaternary_data_",i,".RData",sep=""))
+}
+
+print("ternary data")
+algo_experiments(datasets_path, ks_test_uniformization_pc_algo, "ks_test_uniformization_pc_based","quaternary_data",subsamples_quat,0.01)
+
+

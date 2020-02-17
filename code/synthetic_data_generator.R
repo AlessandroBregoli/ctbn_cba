@@ -132,14 +132,6 @@ generate_and_save <- function(data){
 }
 
 
-iter_list = list(vars3_data,
-		 vars4_data,
-		 vars5_data,
-		 vars6_data,
-		 vars10_data,
-		 vars15_data,
-		 vars20_data
-		 )
 
 mclapply(iter_list, generate_and_save, mc.cores=8)
 

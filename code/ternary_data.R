@@ -48,4 +48,12 @@ vars20_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D",
 		   nsample=100,
 		   name=name)
 
+iter_list = list(vars3_data,
+		 vars4_data,
+		 vars5_data,
+		 vars6_data,
+		 vars10_data,
+		 vars15_data,
+		 vars20_data
+		 )
 

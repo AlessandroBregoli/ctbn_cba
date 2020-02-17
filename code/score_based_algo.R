@@ -11,13 +11,14 @@ score_based <- function(samples,variables){
 }
 
 
+subsamples=c(100)
 datasets_path =c()
 for(i in list(3,4,5,6,10,15,20)){
 	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_binary_data_",i,".RData",sep=""))
 }
 
 print("binary data")
-algo_experiments(datasets_path, score_based,"score_based","binary_data")
+algo_experiments(datasets_path, score_based,"score_based","binary_data",subsamples)
 
 datasets_path =c()
 for(i in list(3,4,5,6,10,15)){
@@ -26,5 +27,16 @@ for(i in list(3,4,5,6,10,15)){
 
 
 print("ternary data")
-algo_experiments(datasets_path, score_based,"score_based","ternary_data")
+algo_experiments(datasets_path, score_based,"score_based","ternary_data",subsamples)
+
+
+subsamples_quat=c(500)
+datasets_path =c()
+for(i in list(3,4,5,6,10,15)){
+	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_quaternary_data_",i,".RData",sep=""))
+}
+
+print("quaternary data")
+algo_experiments(datasets_path, score_based, "score_based","quaternary_data",subsamples_quat)
+
 
