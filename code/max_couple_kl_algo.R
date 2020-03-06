@@ -68,32 +68,9 @@ max_couple_kl_algo <- function(trjs,variables,kx=0.6){
   
 }
 
-subsamples=c(100)
-datasets_path =c()
-for(i in list(3,4,5,6,10,15,20)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_binary_data_",i,".RData",sep=""))
-}
+args = commandArgs(trailingOnly=TRUE)
+source(args[1])
+algo_experiments(datasets_path, max_couple_kl_algo, "max_couple_kl_based",cardinality_data,subsamples,0.52)
 
-print("binary data")
-algo_experiments(datasets_path, max_couple_kl_algo, "max_couple_kl_based","binary_data",subsamples,0.52)
-
-datasets_path =c()
-for(i in list(3,4,5,6,10,15,20)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_ternary_data_",i,".RData",sep=""))
-}
-
-print("ternary data")
-algo_experiments(datasets_path, max_couple_kl_algo, "max_couple_kl_based","ternary_data",subsamples,0.52)
-
-
-
-subsamples_quat=c(500)
-datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_quaternary_data_",i,".RData",sep=""))
-}
-
-print("quaternary data")
-algo_experiments(datasets_path, max_couple_kl_algo, "max_couple_kl_based","quaternary_data",subsamples_quat,0.52)
 
 

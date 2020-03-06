@@ -1,5 +1,6 @@
 md5: a33d22cd0b1572fe6fd8748e764bc3bb
-cmd: Rscript code/ks_test_uniformization_pc_algo.R
+cmd: Rscript code/ks_test_uniformization_pc_algo.R code/ternary_experiment.R
+wdir: ../..
 deps:
 - md5: 1e98d76921c0ecfe05a0fd70f5aad130
   path: code/ks_test_uniformization_pc_algo.R
@@ -7,41 +8,24 @@ deps:
   path: code/experiment_utils.R
 - md5: 9c02906b37c7207700a72028fd56c2c1
   path: code/utils_algo.R
+- md5: 9c02906b37c7207700a72028fd56c2c1
+  path: code/ternary_experiment.R
 - md5: f724891165449e9c74d675681d9ce1d6
-  path: data/networks_and_trajectories_binary_data_3.RData
-- md5: 925b7e2b29b12470a63f1268193bc594
   path: data/networks_and_trajectories_ternary_data_3.RData
 - md5: a3c25366a84d538ed792ded6f376db6b
-  path: data/networks_and_trajectories_binary_data_4.RData
-- md5: d83dd68bf5142362eb3a8e415150b785
   path: data/networks_and_trajectories_ternary_data_4.RData
 - md5: ed2186ff794c83dd41205cf44875ee97
-  path: data/networks_and_trajectories_binary_data_5.RData
-- md5: 54095e6738facddb6d92599fcdded723
   path: data/networks_and_trajectories_ternary_data_5.RData
 - md5: 5792fda300857d7fb4f73679c8d7b482
-  path: data/networks_and_trajectories_binary_data_6.RData
-- md5: 7da7638a911eb8ad2f57343ac0944b7e
   path: data/networks_and_trajectories_ternary_data_6.RData
 - md5: ec6c257e42a5e67dd87142fd93e0b294
-  path: data/networks_and_trajectories_binary_data_10.RData
-- md5: ef9e5951ad702c9c66edcb8e5dd76b4e
   path: data/networks_and_trajectories_ternary_data_10.RData
 - md5: 9ccc266e141975f34e50a2ad92bf2480
-  path: data/networks_and_trajectories_binary_data_15.RData
-- md5: 0d8623680b7b97404d4bdaa868a80f14
   path: data/networks_and_trajectories_ternary_data_15.RData
 - md5: 63d3e83d870206819d3b9c9c69048cd2
-  path: data/networks_and_trajectories_binary_data_20.RData
-- md5: d3954ebbb81a4f703ce1e14176e23d13
   path: data/networks_and_trajectories_ternary_data_20.RData
 outs:
 - md5: 2580d472e21067f7c0d6588573729f33
-  path: metrics/ks_test_uniformization_pc_based_binary_data.json
-  cache: false
-  metric: true
-  persist: false
-- md5: 9e6eaf92c22780a7fa12628875fe58bc
   path: metrics/ks_test_uniformization_pc_based_ternary_data.json
   cache: false
   metric: true

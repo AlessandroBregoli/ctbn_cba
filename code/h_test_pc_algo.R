@@ -149,30 +149,8 @@ h_test_pc_algo <- function(trjs,variables,alpha=0.05){
   
 }
 
+args = commandArgs(trailingOnly=TRUE)
+source(args[1])
 
-subsamples=c(100)
-datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_binary_data_",i,".RData",sep=""))
-}
+algo_experiments(datasets_path, h_test_pc_algo, "h_test_pc_based",cardinality_data,subsamples,0.2)
 
-print("binary data")
-algo_experiments(datasets_path, h_test_pc_algo, "h_test_pc_based","binary_data",subsamples,0.2)
-
-datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_ternary_data_",i,".RData",sep=""))
-}
-
-print("ternary data")
-algo_experiments(datasets_path, h_test_pc_algo, "h_test_pc_based","ternary_data",subsamples,0.2)
-
-
-subsamples_quat=c(500)
-datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_quaternary_data_",i,".RData",sep=""))
-}
-
-print("quaternary data")
-algo_experiments(datasets_path, h_test_pc_algo, "h_test_pc_based","quaternary_data",subsamples_quat,0.2)

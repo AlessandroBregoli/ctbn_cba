@@ -59,31 +59,7 @@ max_kl_algo <- function(trjs,variables,alpha=0.01){
   return(ret)
 }
 
-subsamples=c(100)
-datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_binary_data_",i,".RData",sep=""))
-}
-
-print("binary_data")
-algo_experiments(datasets_path, max_kl_algo, "max_kl_based","binary_data",subsamples,list(0.56,0.01))
-
-
-datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_ternary_data_",i,".RData",sep=""))
-}
-
-print("ternary_data")
-algo_experiments(datasets_path, max_kl_algo, "max_kl_based","ternary_data",subsamples,list(0.56,0.01))
-
-subsamples_quat=c(500)
-datasets_path =c()
-for(i in list(3,4,5,6,10,15)){
-	datasets_path = c(datasets_path, paste("data/networks_and_trajectories_quaternary_data_",i,".RData",sep=""))
-}
-
-print("quaternary data")
-algo_experiments(datasets_path, max_kl_algo, "max_kl_based","quaternary_data",subsamples_quat,list(0.56,0.01))
-
+args = commandArgs(trailingOnly=TRUE)
+source(args[1])
+algo_experiments(datasets_path, max_kl_algo, "max_kl_based",cardinality_data,subsamples,list(0.56,0.01))
 
