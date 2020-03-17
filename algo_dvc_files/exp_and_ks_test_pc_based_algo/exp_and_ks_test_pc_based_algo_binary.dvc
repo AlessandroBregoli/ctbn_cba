@@ -1,10 +1,10 @@
-md5: 15234574b984ad741651ee4d1be928ac
+md5: a4d0b542c25c8d45bcb202522e53e0ad
 cmd: python3 code/exp_and_ks_test_pc_based_algo.py code/binary_experiment.json
 wdir: ../..
 deps:
 - md5: 4572b8905be2e7492a77892593e2df06
   path: code/exp_and_ks_test_pc_based_algo.py
-- md5: 53b03ff341bb2b05438f158919750f85
+- md5: a35d19be03733594735c1a84e3750aa2
   path: code/binary_experiment.json
 - md5: 53aee6dad13472bc55373ab63057ad6f
   path: data/networks_and_trajectories_binary_data_3.json
@@ -21,7 +21,7 @@ deps:
 - md5: 471dceba4e679768a0c9ac696e68eac8
   path: data/networks_and_trajectories_binary_data_20.json
 outs:
-- md5: c82ea33174cc15904762137e7240eb34
+- md5: 0ec0648d8a9566b0e0b805ee43e1e3d7
   path: metrics/exp_and_ks_test_pc_based_binary_data.json
   cache: false
   metric: true
