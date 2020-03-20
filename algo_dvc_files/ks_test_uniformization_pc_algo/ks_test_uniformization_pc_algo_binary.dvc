@@ -1,5 +1,6 @@
-md5: e745e0f0b7ab5ce3c23664beb31265a3
-cmd: Rscript code/ks_test_uniformization_pc_algo.R code/binary_experiment.R
+md5: 2993374c033ff6b8bcb772132ef8317d
+cmd: Rscript code/ks_test_uniformization_pc_algo.R code/binary_experiment.R 3 4 5
+  6 10
 wdir: ../..
 deps:
 - md5: fd01b3a2755e616ac0d1a375a9a36c84
@@ -8,7 +9,7 @@ deps:
   path: code/experiment_utils.R
 - md5: 9c02906b37c7207700a72028fd56c2c1
   path: code/utils_algo.R
-- md5: 36efbc754a854093253c7fae8f7c95be
+- md5: 388c33ae141b05d531794b2a778750a0
   path: code/binary_experiment.R
 - md5: 31ad3bd4e8553f336cffde209b2e9192
   path: data/networks_and_trajectories_binary_data_3.RData
@@ -25,7 +26,7 @@ deps:
 - md5: 0f178574e012e3ee66ebc3e9a859f976
   path: data/networks_and_trajectories_binary_data_20.RData
 outs:
-- md5: 3f5ac374b23f946c9d1f1ad874dd5b2f
+- md5: 5a6aaec8f6016ea3e308451c2b1c0c93
   path: metrics/ks_test_uniformization_pc_based_binary_data.json
   cache: false
   metric: true

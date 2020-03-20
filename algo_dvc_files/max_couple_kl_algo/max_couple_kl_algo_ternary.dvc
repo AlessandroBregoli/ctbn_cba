@@ -1,12 +1,12 @@
-md5: 9092c7adf8588e8aa36dc86ff888ecf9
-cmd: Rscript code/max_couple_kl_algo.R code/ternary_experiment.R
+md5: 3d173e781518290175b7c9f3991b4c79
+cmd: Rscript code/max_couple_kl_algo.R code/ternary_experiment.R 3 4 5 6 10 15 20
 wdir: ../..
 deps:
 - md5: 08fe18f1dac93c26032bcdd363118e92
   path: code/max_couple_kl_algo.R
 - md5: 97ced95f64f4d5cc0b27dfee9b8c43a1
   path: code/experiment_utils.R
-- md5: c861c58eb329bfb2024c1e6c46cbd085
+- md5: 1c0890933bb6d2a948890e4b74c197db
   path: code/ternary_experiment.R
 - md5: 9c02906b37c7207700a72028fd56c2c1
   path: code/utils_algo.R
@@ -26,7 +26,7 @@ deps:
   path: data/networks_and_trajectories_ternary_data_20.RData
 
 outs:
-- md5: 60a213544b9b985f00630eb862f93e4a
+- md5: 94759f6b05cacb5f6764147ad5eddfc1
   path: metrics/max_couple_kl_based_ternary_data.json
   cache: false
   metric: true

@@ -1,10 +1,10 @@
-md5: d7537dffde3c8560edb67a77033db870
-cmd: Rscript code/max_kl_algo.R code/binary_experiment.R
+md5: bddd172200cd73923973081de3311332
+cmd: Rscript code/max_kl_algo.R code/binary_experiment.R 3 4 5 6 10
 wdir: ../..
 deps:
 - md5: 4449b58e138632ce091c3f7dbcc04826
   path: code/max_kl_algo.R
-- md5: 36efbc754a854093253c7fae8f7c95be
+- md5: 388c33ae141b05d531794b2a778750a0
   path: code/binary_experiment.R
 - md5: 97ced95f64f4d5cc0b27dfee9b8c43a1
   path: code/experiment_utils.R
@@ -25,7 +25,7 @@ deps:
 - md5: 0f178574e012e3ee66ebc3e9a859f976
   path: data/networks_and_trajectories_binary_data_20.RData
 outs:
-- md5: 04f5ca51e34f4a1d49988abf147b73db
+- md5: c508c08f3450e37f47493ab7c0e38937
   path: metrics/max_kl_based_binary_data.json
   cache: false
   metric: true

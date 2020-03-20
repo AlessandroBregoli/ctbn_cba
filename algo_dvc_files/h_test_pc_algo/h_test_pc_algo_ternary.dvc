@@ -1,5 +1,5 @@
 md5: 342513995dc96e5ed747c0efb77945b9
-cmd: Rscript code/h_test_pc_algo.R code/ternary_experiment.R
+cmd: Rscript code/h_test_pc_algo.R code/ternary_experiment.R 3 4 5 6 10 15
 wdir: ../..
 deps:
 - md5: 706237c7412d032ba354a6f63183b567
