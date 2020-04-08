@@ -3,7 +3,7 @@ cmd: python3 code/exp_and_chi2_test_pc_based_algo.py code/binary_experiment.json
 wdir: ../..
 deps:
 - md5: 4572b8905be2e7492a77892593e2df06
-  path: code/exp_and_ks_test_pc_based_algo.py
+  path: code/exp_and_chi2_test_pc_based_algo.py
 - md5: a35d19be03733594735c1a84e3750aa2
   path: code/binary_experiment.json
 - md5: 53aee6dad13472bc55373ab63057ad6f

@@ -114,8 +114,10 @@ class Ctbn_cb:
         
         parents_comb_from, M_from, T_from, CIM_from = self.compute_cim(to_var, parents)
         
+        
         parents_comb, M, T, CIM = self.compute_cim(to_var, parents[parents_no_from_mask])
-        df = self.variables.loc[to_var, "Value"] - 1
+
+        df = self.variables.loc[to_var, "Value"]  - 1 
         df = df * (self.variables.loc[from_var,"Value"] - 1)
         for v in sep_set:
            df = df * (self.variables.loc[v,"Value"] - 1)
@@ -126,6 +128,9 @@ class Ctbn_cb:
                 tmp_parents_comb_from_ids = np.argwhere(np.all(parents_comb_from[:,parents_no_from_mask] == parents_comb[comb_id],axis=1)).ravel()
             else:
                 tmp_parents_comb_from_ids = np.array([x for x in range(parents_comb_from.shape[0])])
+
+            M_diag0 = M[comb_id].copy()
+            np.fill_diagonal(M_diag0,0)
             for comb_from_id in tmp_parents_comb_from_ids:
                 diag = np.diag(CIM[comb_id])
                 diag_from = np.diag(CIM_from[comb_from_id])
@@ -133,15 +138,24 @@ class Ctbn_cb:
                 r2 = np.diag(M_from[comb_from_id])
                 stats = diag/diag_from
                 Q = CIM[comb_id]/diag*-1
-                Q_from = CIM_from[comb_id]/diag_from * -1
+                Q_from = CIM_from[comb_from_id]/diag_from * -1
                 F = np.abs(Q-Q_from)
                 for id_diag in range(diag.shape[0]):
                     if stats[id_diag] < f_dist.ppf(alpha_exp/2, r1[id_diag], r2[id_diag]) or\
                         stats[id_diag] > f_dist.ppf(1-alpha_exp/2, r1[id_diag], r2[id_diag]):
                         return False
-                    D_idx = np.argmax(F[id_diag])
-                if diag.shape[0] > 2 and (np.sum(F[id_diag]/Q) > chi_2_quantile or np.sum(F[id_diag]/Q_from)>chi_2_quantile):
-                    return False
+ 
+                if diag.shape[0] > 2:
+                    M_from_diag0 = M_from[comb_from_id].copy()
+                    np.fill_diagonal(M_from_diag0,0)
+                    # https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/chi2samp.htm
+                    K_from = np.sqrt(np.sum(M_diag0,axis=1) / np.sum(M_from_diag0, axis=1))
+                    K = np.sqrt(np.sum(M_from_diag0, axis=1) / np.sum(M_diag0,axis=1))
+                    chi_stats = np.sum((np.power((M_diag0.T * K).T - (M_from_diag0.T * K_from).T, 2).T\
+                                /(np.sum(M_diag0, axis=1) + np.sum(M_from_diag0, axis=1))).T, axis=1)                
+
+                    if np.any(chi_stats > chi_2_quantile):
+                        return False
 
 
         return True
@@ -214,7 +228,7 @@ if __name__=="__main__":
                 traj = [pd.DataFrame(x) for x in network["samples"]]
                 a = time.time()
                 ctbn_cb.prepare_trajectories(traj[0:subsample],pd.DataFrame(network["variables"]))
-                ctbn_cb.cb_structure_algo(alpha_exp=0.2, alpha_ks=0.1)
+                ctbn_cb.cb_structure_algo(alpha_exp=0.2, alpha_ks=0.2)
                 b = time.time()
                 execution_time += b-a
                 cf_matrix += confusion_matrix(adj_list_to_adj_matrix(network["dyn.str"], pd.DataFrame(network["variables"])),\

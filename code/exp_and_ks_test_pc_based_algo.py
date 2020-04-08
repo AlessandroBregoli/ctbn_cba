@@ -128,7 +128,7 @@ class Ctbn_cb:
                 r2 = np.diag(M_from[comb_from_id])
                 stats = diag/diag_from
                 Q = CIM[comb_id]/diag*-1
-                Q_from = CIM_from[comb_id]/diag_from * -1
+                Q_from = CIM_from[comb_from_id]/diag_from * -1
                 F = np.abs(Q-Q_from)
                 for id_diag in range(diag.shape[0]):
                     if stats[id_diag] < f_dist.ppf(alpha_exp/2, r1[id_diag], r2[id_diag]) or\
