@@ -106,7 +106,7 @@ class Ctbn_cb:
  #       self._compute_cim.parallel_diagnostics(level=4)
     
     
-    def independence_test(self, to_var, from_var, sep_set, alpha_exp, alpha_ks):
+    def independence_test(self, to_var, from_var, sep_set, alpha_exp, alpha_chi2, thumb_threshold):
         parents = np.array(sep_set)
         parents = np.append(parents,from_var)
         parents.sort()
@@ -114,14 +114,20 @@ class Ctbn_cb:
         
         parents_comb_from, M_from, T_from, CIM_from = self.compute_cim(to_var, parents)
         
-        
-        parents_comb, M, T, CIM = self.compute_cim(to_var, parents[parents_no_from_mask])
+        if self.variables.loc[to_var, "Value"] > 2:
+            df = (self.variables.loc[to_var, "Value"]  - 1 ) ** 2
+            df = df * (self.variables.loc[from_var,"Value"] )
+            for v in sep_set:
+               df = df * (self.variables.loc[v,"Value"])
 
-        df = self.variables.loc[to_var, "Value"]  - 1 
-        df = df * (self.variables.loc[from_var,"Value"] - 1)
-        for v in sep_set:
-           df = df * (self.variables.loc[v,"Value"] - 1)
-        chi_2_quantile = chi2_dist.ppf(1-alpha_ks,df)
+            if np.all(np.sum(np.diagonal(M_from,axis1=1,axis2=2),axis=1)/df <  thumb_threshold): 
+                return False
+
+            chi_2_quantile = chi2_dist.ppf(1-alpha_chi2,self.variables.loc[to_var, "Value"]  - 1 )
+
+        parents_comb, M, T, CIM = self.compute_cim(to_var, parents[parents_no_from_mask])
+        
+        
         for comb_id in range(parents_comb.shape[0]):
             #Bad code, inefficient
             if parents.shape[0] > 1:
@@ -129,38 +135,35 @@ class Ctbn_cb:
             else:
                 tmp_parents_comb_from_ids = np.array([x for x in range(parents_comb_from.shape[0])])
 
-            M_diag0 = M[comb_id].copy()
-            np.fill_diagonal(M_diag0,0)
             for comb_from_id in tmp_parents_comb_from_ids:
                 diag = np.diag(CIM[comb_id])
                 diag_from = np.diag(CIM_from[comb_from_id])
                 r1 = np.diag(M[comb_id])
                 r2 = np.diag(M_from[comb_from_id])
-                stats = diag/diag_from
-                Q = CIM[comb_id]/diag*-1
-                Q_from = CIM_from[comb_from_id]/diag_from * -1
-                F = np.abs(Q-Q_from)
+                stats = diag_from/diag
                 for id_diag in range(diag.shape[0]):
                     if stats[id_diag] < f_dist.ppf(alpha_exp/2, r1[id_diag], r2[id_diag]) or\
                         stats[id_diag] > f_dist.ppf(1-alpha_exp/2, r1[id_diag], r2[id_diag]):
                         return False
  
                 if diag.shape[0] > 2:
-                    M_from_diag0 = M_from[comb_from_id].copy()
-                    np.fill_diagonal(M_from_diag0,0)
+
                     # https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/chi2samp.htm
-                    K_from = np.sqrt(np.sum(M_diag0,axis=1) / np.sum(M_from_diag0, axis=1))
-                    K = np.sqrt(np.sum(M_from_diag0, axis=1) / np.sum(M_diag0,axis=1))
-                    chi_stats = np.sum((np.power((M_diag0.T * K).T - (M_from_diag0.T * K_from).T, 2).T\
-                                /(np.sum(M_diag0, axis=1) + np.sum(M_from_diag0, axis=1))).T, axis=1)                
+                    K_from = np.sqrt(M[comb_id].diagonal() / M_from[comb_from_id].diagonal())
+                    K = np.sqrt(M_from[comb_from_id].diagonal() / M[comb_id].diagonal())
+                    
+                    M_no_diag = M[comb_id][~np.eye(diag.shape[0], dtype=np.bool)].reshape(diag.shape[0],-1)
+                    M_from_no_diag = M_from[comb_from_id][~np.eye(diag.shape[0], dtype=np.bool)].reshape(diag.shape[0],-1)
+
+                    chi_stats = np.sum((np.power((M_no_diag.T * K).T - (M_from_no_diag.T * K_from).T, 2).T\
+                                /(M[comb_id].diagonal() + M_from[comb_from_id].diagonal())).T, axis=1)                
 
                     if np.any(chi_stats > chi_2_quantile):
                         return False
 
-
         return True
 
-    def cb_structure_algo(self, alpha_exp, alpha_ks):
+    def cb_structure_algo(self, alpha_exp, alpha_chi2, thumb_threshold):
         adj_matrix = np.ones((self.variables.shape[0], self.variables.shape[0]), dtype=np.bool)
         np.fill_diagonal(adj_matrix, False)
         for to_var in tqdm(range(self.variables.shape[0])):
@@ -174,7 +177,7 @@ class Ctbn_cb:
                         break
                     sep_set_vars = tested_variables[tested_variables!=from_var]
                     for comb in combinations(sep_set_vars,n):
-                        if self.independence_test(to_var, from_var, comb,alpha_exp, alpha_ks):
+                        if self.independence_test(to_var, from_var, comb,alpha_exp, alpha_chi2, thumb_threshold):
                             adj_matrix[from_var, to_var] = False
                             tested_variables = np.argwhere(adj_matrix[:,to_var]).ravel()
                             break
@@ -228,7 +231,7 @@ if __name__=="__main__":
                 traj = [pd.DataFrame(x) for x in network["samples"]]
                 a = time.time()
                 ctbn_cb.prepare_trajectories(traj[0:subsample],pd.DataFrame(network["variables"]))
-                ctbn_cb.cb_structure_algo(alpha_exp=0.2, alpha_ks=0.2)
+                ctbn_cb.cb_structure_algo(alpha_exp=0.1, alpha_chi2=0.1, thumb_threshold=25)
                 b = time.time()
                 execution_time += b-a
                 cf_matrix += confusion_matrix(adj_list_to_adj_matrix(network["dyn.str"], pd.DataFrame(network["variables"])),\
