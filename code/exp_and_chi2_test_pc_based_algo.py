@@ -231,7 +231,7 @@ if __name__=="__main__":
                 traj = [pd.DataFrame(x) for x in network["samples"]]
                 a = time.time()
                 ctbn_cb.prepare_trajectories(traj[0:subsample],pd.DataFrame(network["variables"]))
-                ctbn_cb.cb_structure_algo(alpha_exp=0.1, alpha_chi2=0.05, thumb_threshold=25)
+                ctbn_cb.cb_structure_algo(alpha_exp=0.1, alpha_chi2=0.1, thumb_threshold=25)
                 b = time.time()
                 execution_time += b-a
                 cf_matrix += confusion_matrix(adj_list_to_adj_matrix(network["dyn.str"], pd.DataFrame(network["variables"])),\
