@@ -126,17 +126,17 @@ class Ctbn_cb:
                 diag_from = np.diag(CIM_from[comb_from_id])
                 r1 = np.diag(M[comb_id])
                 r2 = np.diag(M_from[comb_from_id])
-                stats = diag/diag_from
-                Q = CIM[comb_id]/diag*-1
-                Q_from = CIM_from[comb_from_id]/diag_from * -1
+                stats = diag_from/diag
+                Q = (CIM[comb_id]/diag*-1).cumsum(axis=1)
+                Q_from = (CIM_from[comb_from_id]/diag_from * -1).cumsum(axis=1)
                 F = np.abs(Q-Q_from)
                 for id_diag in range(diag.shape[0]):
                     if stats[id_diag] < f_dist.ppf(alpha_exp/2, r1[id_diag], r2[id_diag]) or\
                         stats[id_diag] > f_dist.ppf(1-alpha_exp/2, r1[id_diag], r2[id_diag]):
                         return False
                     D_idx = np.argmax(F[id_diag])
-                    m = CIM[comb_id,id_diag,id_diag]*-1
-                    m_from = CIM_from[comb_from_id,id_diag,id_diag]*-1
+                    m = M[comb_id,id_diag,id_diag]
+                    m_from = M_from[comb_from_id,id_diag,id_diag]
                     if diag.shape[0] > 2 and F[id_diag,D_idx] > np.sqrt(-np.log(alpha_ks/2)/2*(m+m_from)/(m*m_from)):
                         return False
 
@@ -211,7 +211,7 @@ if __name__=="__main__":
                 traj = [pd.DataFrame(x) for x in network["samples"]]
                 a = time.time()
                 ctbn_cb.prepare_trajectories(traj[0:subsample],pd.DataFrame(network["variables"]))
-                ctbn_cb.cb_structure_algo(alpha_exp=0.2, alpha_ks=0.1)
+                ctbn_cb.cb_structure_algo(alpha_exp=0.2, alpha_ks=1e-3)
                 b = time.time()
                 execution_time += b-a
                 cf_matrix += confusion_matrix(adj_list_to_adj_matrix(network["dyn.str"], pd.DataFrame(network["variables"])),\
