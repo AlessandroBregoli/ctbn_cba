@@ -1,8 +1,8 @@
-md5: 657b97d01c29afc9365b9f27e2366b98
+md5: 37ee1e6a583cd34b6141160aaeeb688a
 cmd: python3 code/exp_and_ks_test_pc_based_algo.py code/ternary_experiment.json
 wdir: ../..
 deps:
-- md5: 0fcb51f5fadab8dc362b3c8914ddf8ce
+- md5: ae524935a9ee9b0cd7487b51f69f8d9e
   path: code/exp_and_ks_test_pc_based_algo.py
 - md5: 334b0975ebb6a13019201da3d34f3850
   path: code/ternary_experiment.json
@@ -21,7 +21,7 @@ deps:
 - md5: de3bff8745eddd31f27e391c898f851e
   path: data/networks_and_trajectories_ternary_data_20.json
 outs:
-- md5: 32eb3af9b638e38acb398802040139cb
+- md5: 1a4ea7bbfe839098477ed6931d9ccbc9
   path: metrics/exp_and_ks_test_pc_based_ternary_data.json
   cache: false
   metric: true
