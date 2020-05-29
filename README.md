@@ -116,8 +116,7 @@ a single file structured as follow:
             "Non-Edge": TN <- True Negative
           ],
         "esecution.time": time <- execution time in seconds
-        }
       }
-
+    }
 ```
 
