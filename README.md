@@ -104,19 +104,20 @@ a single file structured as follow:
 
 ```
   "networks_and_trajectories_ternary_data_01_3": {  <- cardinality, netowrk density and number of nodes.
-    "100_trajectories": [    <- number of trajectories
-      {
-        "cf_matrix": [  <- confusion matrix
-          {
-            "Edge": TP,  <- True Positive
-            "Non-Edge": FP <- False Positive
-          },
-          {
-            "Edge": FN, <- False Negative
-            "Non-Edge": TN <- True Negative
-          ],
-        "esecution.time": time <- execution time in seconds
-      }
-    }
+    "100_trajectories":     <- number of trajectories
+    {
+      "cf_matrix": [  <- confusion matrix
+        {
+          "Edge": TP,  <- True Positive
+          "Non-Edge": FP <- False Positive
+        },
+        {
+          "Edge": FN, <- False Negative
+          "Non-Edge": TN <- True Negative
+        ],
+      "esecution.time": time <- execution time in seconds
+    },
+    ...
+  }
 ```
 
