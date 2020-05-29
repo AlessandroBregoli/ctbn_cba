@@ -51,7 +51,7 @@ We assess the performance of this two algorithms against that of the score-based
 in the CTBN-RLE library.
 
 
-### ![CTPC{\chi ^2}](https://render.githubusercontent.com/render/math?math=CTPC_%7B%5Cchi%20%5E2%7D)
+### Algorithm ![CTPC{\chi ^2}](https://render.githubusercontent.com/render/math?math=CTPC_%7B%5Cchi%20%5E2%7D)
 
   This algorithm has been implemented in python and the source code can be retrieved from folder _code_. 
   [code/exp\_and\_chi2\_test\_pc\_based\_algo.py](code/exp_and_chi2_test_pc_based_algo.py).
@@ -66,10 +66,10 @@ in the CTBN-RLE library.
 - `dvc repro algo_dvc_files/exp_and_chi2_test_pc_based_algo/exp_and_chi2_test_pc_based_algo_ternary_02.dvc`
 - `dvc repro algo_dvc_files/exp_and_chi2_test_pc_based_algo/exp_and_chi2_test_pc_based_algo_ternary.dvc`
 
-### ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)
+### Algorithm ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)
 
   This algorithm has been implemented in python and the source code can be retrieved from folder _code_. 
-  ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)
+  [code/exp\_and\_ks\_test\_pc\_based\_algo.py](code/exp_and_ks_test_pc_based_algo.py)
   
   The experiments for ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)  
   can be reproduced using the following commands:
@@ -102,7 +102,7 @@ All the results can be retrieved from folder  _metrics_ in json format.
 For each combination of network density, node cardinality and algorithm there is
 a single file structured as follow:
 
-`
+```
   "networks_and_trajectories_ternary_data_01_3": {  <- cardinality, netowrk density and number of nodes.
     "100_trajectories": [    <- number of trajectories
       {
@@ -119,5 +119,5 @@ a single file structured as follow:
         }
       }
 
-`
+```
 
