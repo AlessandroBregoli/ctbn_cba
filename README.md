@@ -83,7 +83,7 @@ in the CTBN-RLE library.
 
 ### Score based
 
-Score-based learning has been performed by the CTBN-RLE](http://rlair.cs.ucr.edu/ctbnrle/Rinterface/) package.
+Score-based learning has been performed by the [CTBN-RLE](http://rlair.cs.ucr.edu/ctbnrle/Rinterface/) package.
 
 The following commands reproduces the  experiments for this algorithm.
 
