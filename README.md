@@ -47,7 +47,7 @@ to present only the best two:
 - ![CTPC{\chi ^2}](https://render.githubusercontent.com/render/math?math=CTPC_%7B%5Cchi%20%5E2%7D)
 - ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)
 
-We assess the performance of this two algorithms against that of the score-based algorithm implemented
+We assess the performance of these two algorithms against that of the score-based algorithm implemented
 in the CTBN-RLE library.
 
 
