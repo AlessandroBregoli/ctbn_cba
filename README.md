@@ -50,9 +50,14 @@ to present only the best two:
 We assess the performance of this two algorithms against that of the score-based algorithm implemented
 in the CTBN-RLE library.
 
-In order to reproduce the experiments the following commands must be executed.
 
 ### ![CTPC{\chi ^2}](https://render.githubusercontent.com/render/math?math=CTPC_%7B%5Cchi%20%5E2%7D)
+
+  This algorithm has been implemented in python and the source code can be retrieved from folder _code_. 
+  [code/exp\_and\_chi2\_test\_pc\_based\_algo.py](code/exp_and_chi2_test_pc_based_algo.py).
+  
+  The experiments for ![CTPC{\chi ^2}](https://render.githubusercontent.com/render/math?math=CTPC_%7B%5Cchi%20%5E2%7D)
+  can be reproduced using the following commands:
 
 - `dvc repro algo_dvc_files/exp_and_chi2_test_pc_based_algo/exp_and_chi2_test_pc_based_algo_binary_01.dvc`
 - `dvc repro algo_dvc_files/exp_and_chi2_test_pc_based_algo/exp_and_chi2_test_pc_based_algo_binary_02.dvc`
@@ -63,6 +68,12 @@ In order to reproduce the experiments the following commands must be executed.
 
 ### ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)
 
+  This algorithm has been implemented in python and the source code can be retrieved from folder _code_. 
+  ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)
+  
+  The experiments for ![CTPC{KS}](https://render.githubusercontent.com/render/math?math=CTPC_%7BKS%7D)  
+  can be reproduced using the following commands:
+
 - `dvc repro algo_dvc_files/exp_and_ks_test_pc_based_algo/exp_and_ks_test_pc_based_algo_binary_01.dvc`
 - `dvc repro algo_dvc_files/exp_and_ks_test_pc_based_algo/exp_and_ks_test_pc_based_algo_binary_02.dvc`
 - `dvc repro algo_dvc_files/exp_and_ks_test_pc_based_algo/exp_and_ks_test_pc_based_algo_binary.dvc`
@@ -71,6 +82,10 @@ In order to reproduce the experiments the following commands must be executed.
 - `dvc repro algo_dvc_files/exp_and_ks_test_pc_based_algo/exp_and_ks_test_pc_based_algo_ternary.dvc`
 
 ### Score based
+
+Score-based learning has been performed by the CTBN-RLE](http://rlair.cs.ucr.edu/ctbnrle/Rinterface/) package.
+
+The following commands reproduces the  experiments for this algorithm.
 
 - `dvc repro algo_dvc_files/score_based/score_based_binary_01.dvc`
 - `dvc repro algo_dvc_files/score_based/score_based_binary_02.dvc`
@@ -82,4 +97,27 @@ In order to reproduce the experiments the following commands must be executed.
 
 ## Results
 
-All the results can be retrived in the _metrics_ folder in json format.
+All the results can be retrieved from folder  _metrics_ in json format.
+
+For each combination of network density, node cardinality and algorithm there is
+a single file structured as follow:
+
+`
+  "networks_and_trajectories_ternary_data_01_3": {  <- cardinality, netowrk density and number of nodes.
+    "100_trajectories": [    <- number of trajectories
+      {
+        "cf_matrix": [  <- confusion matrix
+          {
+            "Edge": TP,  <- True Positive
+            "Non-Edge": FP <- False Positive
+          },
+          {
+            "Edge": FN, <- False Negative
+            "Non-Edge": TN <- True Negative
+          ],
+        "esecution.time": time <- execution time in seconds
+        }
+      }
+
+`
+
