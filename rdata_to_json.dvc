@@ -1,409 +1,315 @@
-md5: 10464a9edcd01297d6c6494be5f3309d
+md5: c1bc9e2fbbfadc9c79e4b594659bbaa3
 cmd: Rscript code/rdata_to_json.R
 deps:
-- md5: 79164e7913ab3059dd1e921d2e41b757
+- md5: 9aef4ae9ab36ef7c43834736306f6bbf
   path: code/rdata_to_json.R
-- md5: 31ad3bd4e8553f336cffde209b2e9192
+- md5: 88f2d03aa877ab1acfad155c233f413a
   path: data/networks_and_trajectories_binary_data_3.RData
-- md5: 923a36c1d8ebc4384c1c95a5db6b4d4d
+- md5: e9433a0b100a49f24efd8cbc2c026804
   path: data/networks_and_trajectories_ternary_data_3.RData
-- md5: b3cec7a41a4155096d4bcc83b9646629
+- md5: 2973598ea312b15d419fa0cf80ff2fb5
+  path: data/networks_and_trajectories_quaternary_data_3.RData
+- md5: e4420df2934a215059ef7bab13e2a7e6
   path: data/networks_and_trajectories_binary_data_4.RData
-- md5: c1416468032ea48f24339d2ac34f4592
+- md5: 9d2c0dd188c4fe591a0a0cbb8f67c3d4
   path: data/networks_and_trajectories_ternary_data_4.RData
-- md5: e375e31d556bc20eff77576647e2ad62
+- md5: da0ede9449bd2115d992e41a899514ec
+  path: data/networks_and_trajectories_quaternary_data_4.RData
+- md5: 7b141fb477e5b6ebc95bb53283fc1ff4
   path: data/networks_and_trajectories_binary_data_5.RData
-- md5: d81bb0dbf5114e876566bd5babe32533
+- md5: 3ffdeb2fef987ade0304c8f4f0ccb49e
   path: data/networks_and_trajectories_ternary_data_5.RData
-- md5: f103be3163d4bfd16e0639d0fa6eae0f
+- md5: f420181224c9e0f0f3febdf7957229fb
+  path: data/networks_and_trajectories_quaternary_data_5.RData
+- md5: d797071b0bedfb2ae4223486c5c28070
   path: data/networks_and_trajectories_binary_data_6.RData
-- md5: bc979b25afcbd3b650a6f2c4fb5455ef
+- md5: 81dedaa7f6a8b614e274559b7d41ff98
   path: data/networks_and_trajectories_ternary_data_6.RData
-- md5: 6cc7e6605af382713f4a1c97756f4125
+- md5: b58274eb79d9e0277cf654d08d6c2cfd
+  path: data/networks_and_trajectories_quaternary_data_6.RData
+- md5: 151f9eb8a8a70183d88004eb5b9b629d
   path: data/networks_and_trajectories_binary_data_10.RData
-- md5: fe22b177d86b50f6e3cb04bb5bc9140e
+- md5: cc2900dd55ba86984db7e141865e1e1e
   path: data/networks_and_trajectories_ternary_data_10.RData
-- md5: 27642f6df8a599cde196d33797883d6b
+- md5: b1ad7518e5c01e115ecf4b408fe8456f
+  path: data/networks_and_trajectories_quaternary_data_10.RData
+- md5: 34b642c9de76d194377009fd0e7821f0
   path: data/networks_and_trajectories_binary_data_15.RData
-- md5: dfea8106c5585d58b6cbd45ec4b3adc4
+- md5: b9ca4d5c68fcbdc7e680519f074358aa
   path: data/networks_and_trajectories_ternary_data_15.RData
-- md5: 0f178574e012e3ee66ebc3e9a859f976
+- md5: 0d5529d9b0ddfef441929b5256d88230
   path: data/networks_and_trajectories_binary_data_20.RData
-- md5: 1b8e38cfdf2b70cddf5e51c3c3372e03
+- md5: aa241e0bd6259ac3e5f2ffcf4f684406
   path: data/networks_and_trajectories_ternary_data_20.RData
 
-- md5: 53503a7b3a19191982aada0a06868b30
+- md5: b56fead317cc6ac02d49affa233ff3d1
   path: data/networks_and_trajectories_binary_data_01_3.RData
-- md5: 1b6e6d0e1f5c8f71224ed5597df861bd
+- md5: 3241409642f3e346c588132c745dd443
   path: data/networks_and_trajectories_ternary_data_01_3.RData
-- md5: 60d5fa260b38952f76122384c6665dad
+- md5: 11c2e488a741a4710c711ac1653a212e
+  path: data/networks_and_trajectories_quaternary_data_01_3.RData
+- md5: 9723f792f1e776eceeba857dc5938516
   path: data/networks_and_trajectories_binary_data_01_4.RData
-- md5: 2be2418c56e9119b511faaa9f25f4e71
+- md5: d12080aeb58e3d04c763a31811404432
   path: data/networks_and_trajectories_ternary_data_01_4.RData
-- md5: 9ed59189f4d3cf95d356d5528e160686
+- md5: aa189b3425652f96e563a8de6f1553a5
+  path: data/networks_and_trajectories_quaternary_data_01_4.RData
+- md5: f2d93b3420116f15866ebe6b9b122d1b
   path: data/networks_and_trajectories_binary_data_01_5.RData
-- md5: dfaf40dc163a953bf5d9f55253b2b3f3
+- md5: 7341989464934f41bf6608d23444a60c
   path: data/networks_and_trajectories_ternary_data_01_5.RData
-- md5: 96f541df0ae38f8d250ea511731d63aa
+- md5: 528b22f31b3a3edd297beea9307504a2
+  path: data/networks_and_trajectories_quaternary_data_01_5.RData
+- md5: 0fb30afdc163f25744636a5a45ffefdb
   path: data/networks_and_trajectories_binary_data_01_6.RData
-- md5: 31aa570956c031c71f291c0e307ee45e
+- md5: af95091e8628616ee1890633cb470d40
   path: data/networks_and_trajectories_ternary_data_01_6.RData
-- md5: 84b10cd39d14da9f60f8e4e38c038a05
+- md5: e2fa70beff8e34d609efc3b63820a238
+  path: data/networks_and_trajectories_quaternary_data_01_6.RData
+- md5: f2b791e1077b5fa038931ab42fe11bcd
   path: data/networks_and_trajectories_binary_data_01_10.RData
-- md5: 29b52707206f5dd88fdbc36811f38bc7
+- md5: dc21d0d69fd6143028b5fb5bd7abc13b
   path: data/networks_and_trajectories_ternary_data_01_10.RData
-- md5: b2086095589bbefb98f4cd1fd9a6110d
+- md5: bc60f12654fb9856e622567cfb29d8b9
+  path: data/networks_and_trajectories_quaternary_data_01_10.RData
+- md5: 48a7e749662fd62b46c2e205acfbe0ac
   path: data/networks_and_trajectories_binary_data_01_15.RData
-- md5: b21484479de81dfeeb3818b0131774e4
+- md5: 506f12f0eed532aff358f3f5ee12b168
   path: data/networks_and_trajectories_ternary_data_01_15.RData
-- md5: 3afc71fdb9a2e5cac372ef2dbb683927
+- md5: 7d01435788d48136472a2a5ebb2fe8a6
   path: data/networks_and_trajectories_binary_data_01_20.RData
-- md5: db4ccf3480b6639f695d167c0b1fab56
+- md5: b90f73d54a8850da41b4aba0c697cc29
   path: data/networks_and_trajectories_ternary_data_01_20.RData
 
-- md5: ac3ac7efc2181d1ee1b8625a21e50103
+- md5: 432bbe53a12a0a054bee99443bcbba19
   path: data/networks_and_trajectories_binary_data_02_3.RData
-- md5: 9d6c76a4e7e11fe482090eba6806c899
+- md5: 496fa8c74d8d04e41bf4e12a2fc2491e
   path: data/networks_and_trajectories_ternary_data_02_3.RData
-- md5: b49b05193685e314e42f2b0b12440762
+- md5: 1f292c78be760cba9dbd1b644c07ba0b
+  path: data/networks_and_trajectories_quaternary_data_02_3.RData
+- md5: 5b03e0e08488bc2a4ab730b6368386cb
   path: data/networks_and_trajectories_binary_data_02_4.RData
-- md5: 6c15934d440ba6e3c3cb74dede17e3eb
+- md5: 4e4d8983201a68f295e3bf27aa31f03f
   path: data/networks_and_trajectories_ternary_data_02_4.RData
-- md5: 246abe09e6f3b4ad16f71442b876f34e
+- md5: 0565d4b33c44a68ac5308bb2e58b15e1
+  path: data/networks_and_trajectories_quaternary_data_02_4.RData
+- md5: fcee35c05efbd14aa521fa4b36d33475
   path: data/networks_and_trajectories_binary_data_02_5.RData
-- md5: 9215f9ee79766ec12034faa38e2ab3af
+- md5: 0f22fdbb90c577f09bdc28f14079d32f
   path: data/networks_and_trajectories_ternary_data_02_5.RData
-- md5: e8489940391e157a723d9d296bfa08ec
+- md5: 02822e27c08477d20a6f6913a01e4528
+  path: data/networks_and_trajectories_quaternary_data_02_5.RData
+- md5: f41a87e5efd1983b7b89b0a3e894f2e1
   path: data/networks_and_trajectories_binary_data_02_6.RData
-- md5: 8fb2e27deddfa7436a073936d70666ab
+- md5: f0b38124d01e20b8260a32a866e0ba4a
   path: data/networks_and_trajectories_ternary_data_02_6.RData
-- md5: c9072388e12f40bd7b192751c54ffecf
+- md5: 1b2408d8817d6adceef60198a08e5c83
+  path: data/networks_and_trajectories_quaternary_data_02_6.RData
+- md5: 2a191449c4c5eaed3a9327a019f186ae
   path: data/networks_and_trajectories_binary_data_02_10.RData
-- md5: 1d5aee5acf004ce7d5f8fa3d5d5918a1
+- md5: cc103e21b9fed1aad5c35c8c0ca004b4
   path: data/networks_and_trajectories_ternary_data_02_10.RData
-- md5: a060603c5073cbc855c8d4efac973460
+- md5: 41466150dcc803e3d704fca967f6b2c4
+  path: data/networks_and_trajectories_quaternary_data_02_10.RData
+- md5: b42f97228d42c66ab0cfc2215d758317
   path: data/networks_and_trajectories_binary_data_02_15.RData
-- md5: 22bb3c72b1d2d29eefe8073b4122b3ed
+- md5: 4c9cfe65b0cf1809b33acc5cacce6ed9
   path: data/networks_and_trajectories_ternary_data_02_15.RData
-- md5: c0311798e823310710c28d20bac8c169
+- md5: 4d4074f2bb53dd1b9ae0cee6a6f39057
   path: data/networks_and_trajectories_binary_data_02_20.RData
-- md5: 6edff6cb416baaeb4cab1b486653800e
+- md5: 4ca9d9b50ff38b09195d731a94856a76
   path: data/networks_and_trajectories_ternary_data_02_20.RData
 
-- md5: 36dfdc883220ec92111c6347cfcb5aa5
+- md5: d3fdd8ca20c1b5d2affddd93062ac2b7
   path: data/networks_and_trajectories_binary_data_04_3.RData
-- md5: c11fbdc8f424d9f5dc06a2bcfc7fdf53
+- md5: 16f71ca20a9bf6cb93c3abe4e4647bea
   path: data/networks_and_trajectories_ternary_data_04_3.RData
-- md5: c3656fc27cdb1ad642ebdca00630dd0b
+- md5: 8cbf74524355d039ba236e5418a15ba4
+  path: data/networks_and_trajectories_quaternary_data_04_3.RData
+- md5: 1834b8327b588312ecd7f153fbf60bb9
   path: data/networks_and_trajectories_binary_data_04_4.RData
-- md5: b4ef89ca96d07e6f1f985d07a9be2de3
+- md5: 87fd081804e0f5b62084d92c3fcff4cd
   path: data/networks_and_trajectories_ternary_data_04_4.RData
-- md5: 85d8b7427af7b6c13292590726cdfef6
+- md5: 65bd625c69d49a5b10a8b27fff3fa882
+  path: data/networks_and_trajectories_quaternary_data_04_4.RData
+- md5: 2fd1343a021696d3a86e8174ef5ff42a
   path: data/networks_and_trajectories_binary_data_04_5.RData
-- md5: c724050ac7d8aa89d3f47a9f35a1fe5d
+- md5: 5ba746494df94c4a184fba8ec9f4c7ae
   path: data/networks_and_trajectories_ternary_data_04_5.RData
-- md5: 59ae76215e2114e2f1ab190964b9f3a1
+- md5: 5818b93832a312ccc5da36b29b5cc21b
+  path: data/networks_and_trajectories_quaternary_data_04_5.RData
+- md5: 69afe0c0c40b79ba91ada5e5f7be30e6
   path: data/networks_and_trajectories_binary_data_04_6.RData
-- md5: 66912abb6c8e13e286d07e0a3821d32b
+- md5: 3559dbcef6df57c38d081346ef3fd47b
   path: data/networks_and_trajectories_ternary_data_04_6.RData
-- md5: 5e1a6aa4e75581483d4b1b4c7903b472
+- md5: 7111e112ceb5a2fd20f3fea370f87245
+  path: data/networks_and_trajectories_quaternary_data_04_6.RData
+- md5: 5027cdd1e03027682d2f82502e2bc7df
   path: data/networks_and_trajectories_binary_data_04_10.RData
-- md5: cc5d799e4964b16c1d7c649d20d9eca4
+- md5: a51f3d60fae7fb4c6bdefee74f13f507
   path: data/networks_and_trajectories_ternary_data_04_10.RData
-- md5: d70b08aa69d4598c176d7a80bbb1242e
+- md5: c277fc005efc7d23ec73c07ab9c6f835
+  path: data/networks_and_trajectories_quaternary_data_04_10.RData
+- md5: 2755a2a4c5db93e4d885007fc67d513b
   path: data/networks_and_trajectories_binary_data_04_15.RData
-- md5: c563e456bdb4765acfa7a08511f9c938
+- md5: d17dd7a3a73fdbdbbd0a30e45b7a062a
   path: data/networks_and_trajectories_ternary_data_04_15.RData
-- md5: ea7fc0780688fe0e793ae9dd632f1796
+- md5: a025d06fe1e8d6287b12ab3eaf2b71d1
   path: data/networks_and_trajectories_binary_data_04_20.RData
-- md5: d333261298947f6efdb6d0f12cebbb24
+- md5: 771573122555596741c70866760b707e
   path: data/networks_and_trajectories_ternary_data_04_20.RData
 
 
 outs:
-- md5: 53aee6dad13472bc55373ab63057ad6f
+- md5: 16c55e0e2ac6ac93dee274aa8300057b
   path: data/networks_and_trajectories_binary_data_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: f51a37698c5c3b84e93d2f9dc19c6926
+- md5: 999ee2d6c668dbf91288d7aadc1bda1f
   path: data/networks_and_trajectories_ternary_data_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: c499077324b2f311204aaab688f8f623
+- md5: e61e91b9de4887563d88fc50a1f7cd6b
+  path: data/networks_and_trajectories_quaternary_data_3.json
+- md5: b1c058e47649f6591e4f5217cbffae8a
   path: data/networks_and_trajectories_binary_data_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 8bc7335584316986a2c1e7dd53fc0b42
+- md5: e1b2d6be54025a76f97070951ca15694
   path: data/networks_and_trajectories_ternary_data_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 6c36d2ed5473a2b96d423088b3287cb1
+- md5: 092f785c0804110cba5b4cc5efc61316
+  path: data/networks_and_trajectories_quaternary_data_4.json
+- md5: e4a45674a2c250964f7d38f09da37d37
   path: data/networks_and_trajectories_binary_data_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: e1222d5e6d0e8fa55ce3b844b6a7a0a5
+- md5: ed2700ca6d389ab5d2b8fdbf61659f18
   path: data/networks_and_trajectories_ternary_data_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 3e841745cf55e9d28406113b3428b3c9
+- md5: 47f116b7a47d2c9fb8cedbf871820739
+  path: data/networks_and_trajectories_quaternary_data_5.json
+- md5: 052969d11e05f59ff9646e11513f27fa
   path: data/networks_and_trajectories_binary_data_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 6429d5146b43c6506cc7de5619616d32
+- md5: 167d3e1b903a1f8809886543856cc904
   path: data/networks_and_trajectories_ternary_data_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: f07a2340bff8920f6038839f26293b32
+- md5: 6dd1fe0952f73be4a671980ff2889b01
+  path: data/networks_and_trajectories_quaternary_data_6.json
+- md5: b2c00ceadac4881b9bb5b134a03cc325
   path: data/networks_and_trajectories_binary_data_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 3d29578a2c09dec95cb10ca3964b20b6
+- md5: 640f8232af110bb50fad9b5f0063f9f0
   path: data/networks_and_trajectories_ternary_data_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 273ace0e5cca7b90cb2eb329441e15ad
+- md5: bd7e3ab9e585f1164869ba320aaa2563
+  path: data/networks_and_trajectories_quaternary_data_10.json
+- md5: 5929065ed2500db480aee3eb90e5e656
   path: data/networks_and_trajectories_binary_data_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: ed9a5b90dc0883b78dfd5064e2f94b87
+- md5: c8a2fc9cab9c49a0f9ec47f80813e048
   path: data/networks_and_trajectories_ternary_data_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 471dceba4e679768a0c9ac696e68eac8
+- md5: 25c547bb883411c74b9d1ec905dd105d
   path: data/networks_and_trajectories_binary_data_20.json
-  cache: true
-  metric: false
-  persist: false
-- md5: de3bff8745eddd31f27e391c898f851e
+- md5: 1b954969c7fb361cb0e2d05dbf5ec905
   path: data/networks_and_trajectories_ternary_data_20.json
-  cache: true
-  metric: false
-  persist: false
-
-
-- md5: 781441b8d58c1578cb9640d642b95747
+- md5: 4a4e07a85e3a108e1136d4bf24f2615f
   path: data/networks_and_trajectories_binary_data_01_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: faa04b0176a894eb954951f281cebc0f
+- md5: 95c995d3910ac34c34cdb6f05405b822
   path: data/networks_and_trajectories_ternary_data_01_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: cd42adfb0bd93aa0106e636cbbd7ee9b
+- md5: b0397309e91ebd40b383e2fe6e48e8d3
+  path: data/networks_and_trajectories_quaternary_data_01_3.json
+- md5: ec91d17d7fc2e32fb67b2a75fdde9fec
   path: data/networks_and_trajectories_binary_data_01_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 951766c4a22ba15ee93248828f4d32b3
+- md5: c3a9748e1e1734df613c5820967ead70
   path: data/networks_and_trajectories_ternary_data_01_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 2aae5a73fe18c3acb845534ea385e3df
+- md5: 0e9fdea5180e2f54a621fd8eea881456
+  path: data/networks_and_trajectories_quaternary_data_01_4.json
+- md5: 7236e267b3c415bbb2526c8638bbd580
   path: data/networks_and_trajectories_binary_data_01_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 3e9871c1a1c4ee3ca7235477c89c846a
+- md5: 14f0eaabff81ff63485a27889a95be5e
   path: data/networks_and_trajectories_ternary_data_01_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 444ec4c974a5fa2dfbe9f44d3c2e1102
+- md5: 3169256e0245aed53568e19136cb7eac
+  path: data/networks_and_trajectories_quaternary_data_01_5.json
+- md5: 61092c094aa1c3d4cb3d5d07832ad2bb
   path: data/networks_and_trajectories_binary_data_01_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: f5c2f7eee6253e7111b493fb273d298a
+- md5: 51ccb14418a8b52bc0cbd6b82ef30e83
   path: data/networks_and_trajectories_ternary_data_01_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: ccd199b4c4a47fcccdcdc6cfbc4d9d60
+- md5: d256d5a04b67b1d6b8391326f46d5cfe
+  path: data/networks_and_trajectories_quaternary_data_01_6.json
+- md5: a969267d2883f0bec8488d434d34facf
   path: data/networks_and_trajectories_binary_data_01_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 9e89a64828f327310eb399af5fa206a2
+- md5: 27031ccb1ae108a953dcc44aebbd57d2
   path: data/networks_and_trajectories_ternary_data_01_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: b4ab55219255c6210435c201ade118d9
+- md5: 3bab2c2e17b77c62a0bd6b8e4ffc65f9
+  path: data/networks_and_trajectories_quaternary_data_01_10.json
+- md5: b0403ba67827c83bc335e3a1ab864f1a
   path: data/networks_and_trajectories_binary_data_01_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 228c2b283c1d68d098952f80386db68b
+- md5: 29f083d44957241084292c0a7ebbb13e
   path: data/networks_and_trajectories_ternary_data_01_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 6bd9123e48e5ed81071ce853ed443a55
+- md5: d95b861b18e93f09cc144f02186e5d86
   path: data/networks_and_trajectories_binary_data_01_20.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 058cd81cb15a68b56f61fa591ccfbc7b
+- md5: 8b00f8d14e87d399be62eb5f5a55c332
   path: data/networks_and_trajectories_ternary_data_01_20.json
-  cache: true
-  metric: false
-  persist: false
-
-
-- md5: 9a8c9c6a44b7138d4679b40c764c2f9b
+- md5: 9d9bdc8b592c20a2d102124d534d2081
   path: data/networks_and_trajectories_binary_data_04_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 9ff57559837246282c6421145e59947d
+- md5: 42d380318123fca8f503e8fa90eb50d8
   path: data/networks_and_trajectories_ternary_data_04_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: c03b5ff0e4f6fd728dec8d9689321417
+- md5: 5b10dbd06c2ef32be97693887a55e656
+  path: data/networks_and_trajectories_quaternary_data_04_3.json
+- md5: c7564f998e5d84c637ea1b94b0d64b29
   path: data/networks_and_trajectories_binary_data_04_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: e841b5e68a2dfe48c4b7133e38de9fde
+- md5: 2d2ef90e387b7369ccd1775208003ad8
   path: data/networks_and_trajectories_ternary_data_04_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: d2889f204cc1d43850ff0bce1d22bc43
+- md5: 142e381b10d9c7b4e5b27036e958c5c5
+  path: data/networks_and_trajectories_quaternary_data_04_4.json
+- md5: 96181a216727b5ed7c26762ecfae76aa
   path: data/networks_and_trajectories_binary_data_04_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: e07d630cbd08bc224dd9a26ad8af5880
+- md5: 17b6c7d81215114aa592e16451ba263f
   path: data/networks_and_trajectories_ternary_data_04_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: b4f656f9c147e46576c7a001e42ebc8f
+- md5: e4a1ceccc9960d80b00a0e36bb71d171
+  path: data/networks_and_trajectories_quaternary_data_04_5.json
+- md5: 2df11eea8764142093f9e06fa1aad71c
   path: data/networks_and_trajectories_binary_data_04_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: d109f8cd3bd7b7ce73dd07835bbef533
+- md5: 4ca47a359aced6b84ebffe66b8254380
   path: data/networks_and_trajectories_ternary_data_04_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 1551f47f8c4ad1b930ef444ddeabd464
+- md5: 91a691c3f2878895507425039c964d15
+  path: data/networks_and_trajectories_quaternary_data_04_6.json
+- md5: f58fa4e6d6b47f0cad8bc778969436c0
   path: data/networks_and_trajectories_binary_data_04_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: f7c19b8c6abecc3468253de1afd14010
+- md5: 177fcb9aef14739b95ab34d06b1430ce
   path: data/networks_and_trajectories_ternary_data_04_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 9a065f99846fde7efe95c457a4171fc8
+- md5: 0e3284b641a13c92044a0c325e01a1bd
+  path: data/networks_and_trajectories_quaternary_data_04_10.json
+- md5: c9642733e5245024e195fc65eb5c781a
   path: data/networks_and_trajectories_binary_data_04_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: d5c6cdd66aecc83f74eb9a8a020f49ee
+- md5: 4fd24c607f71d0afa8da0999d180c9ca
   path: data/networks_and_trajectories_ternary_data_04_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 81a2ab7c88db80bae04cfc22a898a012
+- md5: f4da3c629f709bfce9fa8837fc49728b
   path: data/networks_and_trajectories_binary_data_04_20.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 0a15abcccb5c28b0817fa9994cc2427d
+- md5: 711b73f98e79ad5d6946603bb02014ea
   path: data/networks_and_trajectories_ternary_data_04_20.json
-  cache: true
-  metric: false
-  persist: false
-
-
-- md5: d080bf851aee44ea3cac3a92d89c1d7a
+- md5: e7e969a2224cb6b86b86098db2503ff3
   path: data/networks_and_trajectories_binary_data_02_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 539999518c11a2e07d1f3bd9c2d3f858
+- md5: 2804002496a7aa4896d3486a7c88af0b
   path: data/networks_and_trajectories_ternary_data_02_3.json
-  cache: true
-  metric: false
-  persist: false
-- md5: e9e24ab18286f89a794cf559b37994d0
+- md5: e177d4c39ca11a3a9da72eabc57ca351
+  path: data/networks_and_trajectories_quaternary_data_02_3.json
+- md5: 0f29fe7dd114b2f2259c8fea236dba29
   path: data/networks_and_trajectories_binary_data_02_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 48d19fe8fa7b1069a574a63017da01be
+- md5: 1be996e4b258e5daba0cdb03121de1c3
   path: data/networks_and_trajectories_ternary_data_02_4.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 293ff782bd287c06b2ec94e2b96d66da
+- md5: c63d37533556ea34361e89aade75ed41
+  path: data/networks_and_trajectories_quaternary_data_02_4.json
+- md5: 025bee3152ec8d08f16f2663661d820e
   path: data/networks_and_trajectories_binary_data_02_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: c153b1cc78cfda7f9c8002c661bb9064
+- md5: 5134f1a5a1fd7f51fb85eeb9bc4b69a5
   path: data/networks_and_trajectories_ternary_data_02_5.json
-  cache: true
-  metric: false
-  persist: false
-- md5: f32c44d96e807a4891c812a6d0a8e708
+- md5: 5beb196582c1f65a12a32b6769a1c092
+  path: data/networks_and_trajectories_quaternary_data_02_5.json
+- md5: 6826525f335e1e017fbe2e5a88b337ad
   path: data/networks_and_trajectories_binary_data_02_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 5993ff5b7fe803695fa3c6d0bce893e9
+- md5: 9c177b96b03d45b588ee590b0e0baf87
   path: data/networks_and_trajectories_ternary_data_02_6.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 32862b51ec835a9e1cc4277a95d15a2b
+- md5: ffd0c08018d733e1fbdee661fa709709
+  path: data/networks_and_trajectories_quaternary_data_02_6.json
+- md5: ca63741d7ec5f470f2658bafb4776576
   path: data/networks_and_trajectories_binary_data_02_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: ac92899be47d380d0918c141bf33acbe
+- md5: 444476b3be77581ad8f1dca042d82ef1
   path: data/networks_and_trajectories_ternary_data_02_10.json
-  cache: true
-  metric: false
-  persist: false
-- md5: e5e29a3d18cff6a09828ed84030d833e
+- md5: ddb439e738ec0979963dd4f14aab5f16
+  path: data/networks_and_trajectories_quaternary_data_02_10.json
+- md5: 5af5a09594c78c4df98f87f796bcef4c
   path: data/networks_and_trajectories_binary_data_02_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: 060b78f6316df194384b22e2b8c19307
+- md5: 7d4ee1ae3570695e212d89697946e8c2
   path: data/networks_and_trajectories_ternary_data_02_15.json
-  cache: true
-  metric: false
-  persist: false
-- md5: c0c6f5d7875b2e59f8fa533518bd864b
+- md5: 946544890e022c11be6436dae10b1d7d
   path: data/networks_and_trajectories_binary_data_02_20.json
-  cache: true
-  metric: false
-  persist: false
-- md5: b1a8119d265550f9a847755cd38f6bf2
+- md5: fdadc690d3f9574d7ae88940c2aa30b4
   path: data/networks_and_trajectories_ternary_data_02_20.json
-  cache: true
-  metric: false
-  persist: false

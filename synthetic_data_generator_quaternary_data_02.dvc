@@ -1,0 +1,18 @@
+md5: 0e21d6d5ae1c8fdf4e4de57e96bc2907
+cmd: Rscript code/synthetic_data_generator.R code/quaternary_data_02.R
+deps:
+- md5: d21235b74985d8b4d79d269e9cac60d9
+  path: code/synthetic_data_generator.R
+- md5: 6cb4f5c8b9f7d8a11be7017843bac535
+  path: code/quaternary_data_02.R
+outs:
+- md5: 1f292c78be760cba9dbd1b644c07ba0b
+  path: data/networks_and_trajectories_quaternary_data_02_3.RData
+- md5: 0565d4b33c44a68ac5308bb2e58b15e1
+  path: data/networks_and_trajectories_quaternary_data_02_4.RData
+- md5: 02822e27c08477d20a6f6913a01e4528
+  path: data/networks_and_trajectories_quaternary_data_02_5.RData
+- md5: 1b2408d8817d6adceef60198a08e5c83
+  path: data/networks_and_trajectories_quaternary_data_02_6.RData
+- md5: 41466150dcc803e3d704fca967f6b2c4
+  path: data/networks_and_trajectories_quaternary_data_02_10.RData
