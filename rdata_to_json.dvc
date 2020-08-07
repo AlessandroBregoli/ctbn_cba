@@ -33,6 +33,8 @@ deps:
   path: data/networks_and_trajectories_ternary_data_10.RData
 - md5: b1ad7518e5c01e115ecf4b408fe8456f
   path: data/networks_and_trajectories_quaternary_data_10.RData
+- md5: b1ad7518e5c01e115ecf4b408fe8456f
+  path: data/networks_and_trajectories_quaternary_data_15.RData
 - md5: 34b642c9de76d194377009fd0e7821f0
   path: data/networks_and_trajectories_binary_data_15.RData
 - md5: b9ca4d5c68fcbdc7e680519f074358aa
@@ -76,6 +78,8 @@ deps:
   path: data/networks_and_trajectories_binary_data_01_15.RData
 - md5: 506f12f0eed532aff358f3f5ee12b168
   path: data/networks_and_trajectories_ternary_data_01_15.RData
+- md5: bc60f12654fb9856e622567cfb29d8b9
+  path: data/networks_and_trajectories_quaternary_data_01_15.RData
 - md5: 7d01435788d48136472a2a5ebb2fe8a6
   path: data/networks_and_trajectories_binary_data_01_20.RData
 - md5: b90f73d54a8850da41b4aba0c697cc29
@@ -115,6 +119,8 @@ deps:
   path: data/networks_and_trajectories_binary_data_02_15.RData
 - md5: 4c9cfe65b0cf1809b33acc5cacce6ed9
   path: data/networks_and_trajectories_ternary_data_02_15.RData
+- md5: 41466150dcc803e3d704fca967f6b2c4
+  path: data/networks_and_trajectories_quaternary_data_02_15.RData
 - md5: 4d4074f2bb53dd1b9ae0cee6a6f39057
   path: data/networks_and_trajectories_binary_data_02_20.RData
 - md5: 4ca9d9b50ff38b09195d731a94856a76
@@ -154,6 +160,8 @@ deps:
   path: data/networks_and_trajectories_binary_data_04_15.RData
 - md5: d17dd7a3a73fdbdbbd0a30e45b7a062a
   path: data/networks_and_trajectories_ternary_data_04_15.RData
+- md5: c277fc005efc7d23ec73c07ab9c6f835
+  path: data/networks_and_trajectories_quaternary_data_04_15.RData
 - md5: a025d06fe1e8d6287b12ab3eaf2b71d1
   path: data/networks_and_trajectories_binary_data_04_20.RData
 - md5: 771573122555596741c70866760b707e
@@ -195,10 +203,13 @@ outs:
   path: data/networks_and_trajectories_binary_data_15.json
 - md5: c8a2fc9cab9c49a0f9ec47f80813e048
   path: data/networks_and_trajectories_ternary_data_15.json
+- md5: bd7e3ab9e585f1164869ba320aaa2563
+  path: data/networks_and_trajectories_quaternary_data_15.json
 - md5: 25c547bb883411c74b9d1ec905dd105d
   path: data/networks_and_trajectories_binary_data_20.json
 - md5: 1b954969c7fb361cb0e2d05dbf5ec905
   path: data/networks_and_trajectories_ternary_data_20.json
+
 - md5: 4a4e07a85e3a108e1136d4bf24f2615f
   path: data/networks_and_trajectories_binary_data_01_3.json
 - md5: 95c995d3910ac34c34cdb6f05405b822
@@ -233,10 +244,13 @@ outs:
   path: data/networks_and_trajectories_binary_data_01_15.json
 - md5: 29f083d44957241084292c0a7ebbb13e
   path: data/networks_and_trajectories_ternary_data_01_15.json
+- md5: 3bab2c2e17b77c62a0bd6b8e4ffc65f9
+  path: data/networks_and_trajectories_quaternary_data_01_15.json
 - md5: d95b861b18e93f09cc144f02186e5d86
   path: data/networks_and_trajectories_binary_data_01_20.json
 - md5: 8b00f8d14e87d399be62eb5f5a55c332
   path: data/networks_and_trajectories_ternary_data_01_20.json
+
 - md5: 9d9bdc8b592c20a2d102124d534d2081
   path: data/networks_and_trajectories_binary_data_04_3.json
 - md5: 42d380318123fca8f503e8fa90eb50d8
@@ -273,8 +287,11 @@ outs:
   path: data/networks_and_trajectories_ternary_data_04_15.json
 - md5: f4da3c629f709bfce9fa8837fc49728b
   path: data/networks_and_trajectories_binary_data_04_20.json
+- md5: 0e3284b641a13c92044a0c325e01a1bd
+  path: data/networks_and_trajectories_quaternary_data_04_15.json
 - md5: 711b73f98e79ad5d6946603bb02014ea
   path: data/networks_and_trajectories_ternary_data_04_20.json
+
 - md5: e7e969a2224cb6b86b86098db2503ff3
   path: data/networks_and_trajectories_binary_data_02_3.json
 - md5: 2804002496a7aa4896d3486a7c88af0b
@@ -309,6 +326,8 @@ outs:
   path: data/networks_and_trajectories_binary_data_02_15.json
 - md5: 7d4ee1ae3570695e212d89697946e8c2
   path: data/networks_and_trajectories_ternary_data_02_15.json
+- md5: ddb439e738ec0979963dd4f14aab5f16
+  path: data/networks_and_trajectories_quaternary_data_02_15.json
 - md5: 946544890e022c11be6436dae10b1d7d
   path: data/networks_and_trajectories_binary_data_02_20.json
 - md5: fdadc690d3f9574d7ae88940c2aa30b4

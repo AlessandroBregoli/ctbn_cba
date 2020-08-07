@@ -9,9 +9,11 @@ algo_experiment <- function(networks, learn_function,subsamples, ...){
     colnames(cf_matrix) = c("Edge", "Non-Edge")
     execution.time=0
     
-    
+    iter_data = list()   
     for(i in seq_along(networks)){
       print(paste(i,"/",length(networks)))
+      iter_cf_matrix = data.frame(c(0,0),c(0,0), row.names = c("Edge","Non-Edge"))
+      colnames(iter_cf_matrix) = c("Edge", "Non-Edge")
       dyn.str = networks[[i]][["dyn.str"]]
       variables = networks[[i]][["variables"]]
       dyn.cims = networks[[i]][["dyn.cims"]]
@@ -22,6 +24,7 @@ algo_experiment <- function(networks, learn_function,subsamples, ...){
       learned.dyn.str = learn_function(samples,variables,...)
       ptm = proc.time() - ptm
       execution.time = execution.time + ptm
+      
       tp = 0
       if(nrow(learned.dyn.str) > 0)
         tp = nrow(intersect(dyn.str,learned.dyn.str))
@@ -32,8 +35,15 @@ algo_experiment <- function(networks, learn_function,subsamples, ...){
       cf_matrix["Edge","Edge"] = cf_matrix["Edge","Edge"] + tp
       cf_matrix["Edge","Non-Edge"] = cf_matrix["Edge","Non-Edge"] + fp
       cf_matrix["Non-Edge","Edge"] = cf_matrix["Non-Edge","Edge"] + fn
+
+      iter_cf_matrix["Non-Edge","Non-Edge"] = tn
+      iter_cf_matrix["Edge","Edge"] =  tp
+      iter_cf_matrix["Edge","Non-Edge"] = fp
+      iter_cf_matrix["Non-Edge","Edge"] = fn
+
+      iter_data[[paste("Iter: ",i, sep="")]] = list(cf_matrix=iter_cf_matrix, execution.time=ptm[["elapsed"]])
     }
-    ret[[paste(ss,"_trajectories",sep="")]] = list(cf_matrix=cf_matrix, execution.time=execution.time[["elapsed"]]/length(networks))
+    ret[[paste(ss,"_trajectories",sep="")]] = list(cf_matrix=cf_matrix, execution.time=execution.time[["elapsed"]]/length(networks), iterations=iter_data)
   }
   return(ret)
 }

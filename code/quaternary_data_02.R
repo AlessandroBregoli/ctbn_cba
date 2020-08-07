@@ -35,9 +35,17 @@ vars10_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D",
 		   nsample=300,
 		   name=name)
 
+vars15_data = list(vars=data.frame("Name"=c("X","Y","Z","Q","V","A","B","C","D","E","F","G","H","I","J"),"Value"=rep(n,15),stringsAsFactors = FALSE),
+		   n_iter=3,
+		   edge_prob=0.2,
+		   time_end=100,
+		   nsample=300,
+		   name=name)
+
 iter_list = list(vars3_data,
 		 vars4_data,
 		 vars5_data,
 		 vars6_data,
-		 vars10_data
+		 vars10_data,
+         vars15_data
 		 )

@@ -1,11 +1,13 @@
-md5: 474b57a12f93f7005b58f6f3e33205f0
-cmd: Rscript code/synthetic_data_generator.R code/quaternary_data_01.R
+md5: cdf9628030562c4e5cb1eeed0616748c
+cmd: Rscript code/score_based_algo.R code/quaternary_experiment_01.R 3 4 5 6 10
+wdir: ../..
 deps:
-- md5: d21235b74985d8b4d79d269e9cac60d9
-  path: code/synthetic_data_generator.R
-- md5: 066f91b7aa51957a2733881671d23a8d
-  path: code/quaternary_data_01.R
-outs:
+- md5: bcdcfcf253777e6fc1677b5bd4bc04c7
+  path: code/score_based_algo.R
+- md5: 61c306c195a22f876d1984c9220efd3b
+  path: code/experiment_utils.R
+- md5: e88b610f9f31dd7c560dcfb762983cd9
+  path: code/quaternary_experiment_01.R
 - md5: 22ac45d9763e5296896d22ba313aa953
   path: data/networks_and_trajectories_quaternary_data_01_3.RData
 - md5: 56ccc1d7d7bdd10eedb51d0377948a94
@@ -18,3 +20,8 @@ outs:
   path: data/networks_and_trajectories_quaternary_data_01_10.RData
 - md5: 3d750cce470b509703fb0e46a0ec15d0
   path: data/networks_and_trajectories_quaternary_data_01_15.RData
+outs:
+- md5: 01594c587cf6ba5a6c74575dbc07f674
+  path: metrics/score_based_quaternary_data_01.json
+  cache: false
+  metric: true
